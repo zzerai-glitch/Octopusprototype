@@ -1,0 +1,115 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Settings — API &amp; MCP | GWI Octopus</title>
+  <link rel="stylesheet" href="css/self-serve.css">
+</head>
+<body>
+  <div class="ss-layout">
+    <aside class="ss-sidenav" aria-label="Main navigation">
+      <div class="ss-sidenav__main">
+        <div class="ss-sidenav__top">
+          <a href="#" class="ss-logo">GWI<span class="ss-logo-dot">.</span></a>
+          <button type="button" class="ss-btn-icon" aria-label="Search">
+            <svg viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg" aria-hidden="true">
+              <circle cx="11" cy="11" r="8" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+              <path d="m21 21-4.3-4.3" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+            </svg>
+          </button>
+        </div>
+        <ul class="ss-navlist">
+          <li>
+            <a class="ss-nav-item" href="#">
+              <svg viewBox="0 0 16 16" fill="none" xmlns="http://www.w3.org/2000/svg" aria-hidden="true"><path d="M2 6.55L8 2l6 4.55V14a1 1 0 01-1 1h-4v-6H7v6H3a1 1 0 01-1-1V6.55z" stroke="currentColor" stroke-width="1.2" fill="none"/></svg>
+              Home
+            </a>
+          </li>
+          <li>
+            <a class="ss-nav-item" href="#">
+              <svg viewBox="0 0 16 16" fill="none" xmlns="http://www.w3.org/2000/svg" aria-hidden="true">
+                <circle cx="8" cy="8" r="6.2" stroke="currentColor" stroke-width="1.2" fill="none"/>
+                <path d="M8 4.8l.9 1.84 2 .3-1.45 1.4.34 2L8 9.77 5.21 10.3l.34-2L4.1 6.94l2-.3L8 4.8z" fill="currentColor"/>
+              </svg>
+              Agent Octopus
+            </a>
+          </li>
+        </ul>
+      </div>
+      <div class="ss-sidenav__footer">
+        <div class="ss-help-row" role="button" tabindex="0">
+          <svg viewBox="0 0 16 16" fill="none" xmlns="http://www.w3.org/2000/svg" aria-hidden="true"><path d="M8 1.5a6.5 6.5 0 100 13 6.5 6.5 0 000-13zm-.2 10a.8.8 0 111.6 0 .8.8 0 01-1.6 0zm1.4-3.2c0 .8-.5 1.3-1.2 1.6v.1a.75.75 0 11-1.5 0v-.35c0-.5.25-.85.75-1.15.55-.35.85-.6.85-1.15 0-.65-.55-1.1-1.25-1.1-.85 0-1.35.55-1.35 1.25a.65.65 0 11-1.3 0A2.5 2.5 0 018 5.85c1.45 0 2.65.85 2.65 2.45z" fill="currentColor"/></svg>
+          <span>Help</span>
+          <svg class="ss-chevron" viewBox="0 0 16 16" fill="none" xmlns="http://www.w3.org/2000/svg" aria-hidden="true"><path d="M4 6l4 4 4-4" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" fill="none"/></svg>
+        </div>
+        <div class="ss-user-block">
+          <button type="button" class="ss-user-trigger" aria-haspopup="true" aria-expanded="false" aria-controls="account-menu-api">
+            <span class="ss-user-avatar" aria-hidden="true">JS</span>
+            <span class="ss-user-trigger__label">John Smith</span>
+            <svg class="ss-chevron" viewBox="0 0 16 16" fill="none" xmlns="http://www.w3.org/2000/svg" aria-hidden="true"><path d="M4 6l4 4 4-4" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" fill="none"/></svg>
+          </button>
+          <ul id="account-menu-api" class="ss-account-menu" role="menu" hidden>
+            <li class="ss-account-menu__item ss-account-menu__item--selected" role="menuitem">
+              <svg viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg" aria-hidden="true">
+                <path d="M12.22 2h-.44a2 2 0 0 0-2 2v.18a2 2 0 0 1-1 1.73l-.43.25a2 2 0 0 1-2 0l-.15-.08a2 2 0 0 0-2.73.73l-.22.38a2 2 0 0 0 .73 2.73l.15.1a2 2 0 0 1 1 1.72v.51a2 2 0 0 1-1 1.74l-.15.09a2 2 0 0 0-.73 2.73l.22.38a2 2 0 0 0 2.73.73l.15-.08a2 2 0 0 1 2 0l.43.25a2 2 0 0 1 1 1.73V20a2 2 0 0 0 2 2h.44a2 2 0 0 0 2-2v-.18a2 2 0 0 1 1-1.73l.43-.25a2 2 0 0 1 2 0l.15.08a2 2 0 0 0 2.73-.73l.22-.39a2 2 0 0 0-.73-2.73l-.15-.08a2 2 0 0 1-1-1.74v-.5a2 2 0 0 1 1-1.74l.15-.09a2 2 0 0 0 .73-2.73l-.22-.38a2 2 0 0 0-2.73-.73l-.15.08a2 2 0 0 1-2 0l-.43-.25a2 2 0 0 1-1-1.73V4a2 2 0 0 0-2-2z" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+                <circle cx="12" cy="12" r="3" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+              </svg>
+              Account settings
+            </li>
+            <li class="ss-account-menu__item" role="menuitem">
+              <svg viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg" aria-hidden="true">
+                <path d="M9 21H5a2 2 0 0 1-2-2V5a2 2 0 0 1 2-2h4" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+                <polyline points="16 17 21 12 16 7" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+                <line x1="21" y1="12" x2="9" y2="12" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+              </svg>
+              Log out
+            </li>
+          </ul>
+        </div>
+      </div>
+    </aside>
+
+    <div class="ss-main">
+      <header class="ss-appbar">
+        <div class="ss-appbar__inner">
+          <h1 class="ss-appbar__title">Settings</h1>
+          <div class="ss-appbar__account">
+            <span>Netflix Media</span>
+            <span class="ss-appbar__avatar-lg" aria-hidden="true">JS</span>
+          </div>
+        </div>
+      </header>
+
+      <nav class="ss-tabs" aria-label="Settings sections">
+        <a class="ss-tab" href="overview.html">
+          <svg viewBox="0 0 12 14" xmlns="http://www.w3.org/2000/svg" aria-hidden="true"><path d="M4.156 13.2l-.012-.001L.6 13.2c-.331 0-.6-.269-.6-.6V7.267c0-.332.269-.6.6-.6l2.956-.001V.6c0-.331.269-.6.6-.6h3.555c.332 0 .6.269.6.6v2.733h2.956c.331 0 .6.269.6.6V12.6c0 .331-.269.6-.6.6H4.156zm2.955-12H4.756V12h2.355V1.2zm3.556 3.333H8.31V12h2.356V4.533zM3.555 7.867H1.2V12h2.355V7.867z" fill="currentColor"/></svg>
+          Overview
+        </a>
+        <a class="ss-tab" href="people.html">
+          <svg viewBox="0 0 16 16" fill="none" xmlns="http://www.w3.org/2000/svg" aria-hidden="true"><circle cx="5.5" cy="6" r="2.25" stroke="currentColor" stroke-width="1.2" fill="none"/><path d="M2 13v-.25c0-1.52 1.57-2.75 3.5-2.75S9 11.23 9 12.75V13" stroke="currentColor" stroke-width="1.2" stroke-linecap="round" fill="none"/><circle cx="11.5" cy="5.75" r="1.85" stroke="currentColor" stroke-width="1.2" fill="none"/><path d="M8.5 12.25c.26-1.23 1.57-2.15 3-2.15.45 0 .88.08 1.27.22" stroke="currentColor" stroke-width="1.2" stroke-linecap="round" fill="none"/></svg>
+          People
+        </a>
+        <a class="ss-tab ss-tab--active" href="api-mcp.html">
+          <svg viewBox="0 0 16 16" fill="none" xmlns="http://www.w3.org/2000/svg" aria-hidden="true"><circle cx="8" cy="8" r="6.2" stroke="currentColor" stroke-width="1.2" fill="none"/><ellipse cx="8" cy="8" rx="2" ry="6.2" stroke="currentColor" stroke-width="1.15" fill="none"/><path d="M1.85 8h12.3" stroke="currentColor" stroke-width="1.15"/><path d="M2.65 11.05h10.7M2.65 4.95h10.7" stroke="currentColor" stroke-width="1"/></svg>
+          API &amp; MCP
+        </a>
+      </nav>
+
+      <section class="ss-page-head" aria-labelledby="page-title">
+        <div class="ss-page-head__divider">
+          <h2 id="page-title" class="ss-page-head__title">API &amp; MCP</h2>
+          <p class="ss-page-head__sub">Connect programmatic access and Model Context Protocol integrations for GWI Octopus.</p>
+        </div>
+      </section>
+
+      <div class="ss-content">
+        <p class="ss-placeholder">
+          This area will manage API keys, tokens, and MCP server configuration. Switch to Overview for account details or People for access management.
+        </p>
+      </div>
+    </div>
+  </div>
+  <script src="js/sidenav.js"></script>
+</body>
+</html>

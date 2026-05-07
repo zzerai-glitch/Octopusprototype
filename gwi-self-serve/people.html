@@ -1,0 +1,1777 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Settings — People | GWI Octopus</title>
+  <link rel="stylesheet" href="css/self-serve.css?v=invite-errors-1">
+</head>
+<body>
+  <div class="ss-layout">
+    <aside class="ss-sidenav" aria-label="Main navigation">
+      <div class="ss-sidenav__main">
+        <div class="ss-sidenav__top">
+          <a href="#" class="ss-logo">GWI<span class="ss-logo-dot">.</span></a>
+          <button type="button" class="ss-btn-icon" aria-label="Search">
+            <svg viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg" aria-hidden="true">
+              <circle cx="11" cy="11" r="8" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+              <path d="m21 21-4.3-4.3" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+            </svg>
+          </button>
+        </div>
+        <ul class="ss-navlist">
+          <li>
+            <a class="ss-nav-item" href="#">
+              <svg viewBox="0 0 16 16" fill="none" xmlns="http://www.w3.org/2000/svg" aria-hidden="true"><path d="M2 6.55L8 2l6 4.55V14a1 1 0 01-1 1h-4v-6H7v6H3a1 1 0 01-1-1V6.55z" stroke="currentColor" stroke-width="1.2" fill="none"/></svg>
+              Home
+            </a>
+          </li>
+          <li>
+            <a class="ss-nav-item" href="#">
+              <svg viewBox="0 0 16 16" fill="none" xmlns="http://www.w3.org/2000/svg" aria-hidden="true">
+                <circle cx="8" cy="8" r="6.2" stroke="currentColor" stroke-width="1.2" fill="none"/>
+                <path d="M8 4.8l.9 1.84 2 .3-1.45 1.4.34 2L8 9.77 5.21 10.3l.34-2L4.1 6.94l2-.3L8 4.8z" fill="currentColor"/>
+              </svg>
+              Agent Octopus
+            </a>
+          </li>
+        </ul>
+      </div>
+      <div class="ss-sidenav__footer">
+        <div class="ss-help-row" role="button" tabindex="0">
+          <svg viewBox="0 0 16 16" fill="none" xmlns="http://www.w3.org/2000/svg" aria-hidden="true"><path d="M8 1.5a6.5 6.5 0 100 13 6.5 6.5 0 000-13zm-.2 10a.8.8 0 111.6 0 .8.8 0 01-1.6 0zm1.4-3.2c0 .8-.5 1.3-1.2 1.6v.1a.75.75 0 11-1.5 0v-.35c0-.5.25-.85.75-1.15.55-.35.85-.6.85-1.15 0-.65-.55-1.1-1.25-1.1-.85 0-1.35.55-1.35 1.25a.65.65 0 11-1.3 0A2.5 2.5 0 018 5.85c1.45 0 2.65.85 2.65 2.45z" fill="currentColor"/></svg>
+          <span>Help</span>
+          <svg class="ss-chevron" viewBox="0 0 16 16" fill="none" xmlns="http://www.w3.org/2000/svg" aria-hidden="true"><path d="M4 6l4 4 4-4" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" fill="none"/></svg>
+        </div>
+        <div class="ss-user-block">
+          <button type="button" class="ss-user-trigger" aria-haspopup="true" aria-expanded="false" aria-controls="account-menu-people">
+            <span class="ss-user-avatar" aria-hidden="true">JS</span>
+            <span class="ss-user-trigger__label">John Smith</span>
+            <svg class="ss-chevron" viewBox="0 0 16 16" fill="none" xmlns="http://www.w3.org/2000/svg" aria-hidden="true"><path d="M4 6l4 4 4-4" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" fill="none"/></svg>
+          </button>
+          <ul id="account-menu-people" class="ss-account-menu" role="menu" hidden>
+            <li class="ss-account-menu__item ss-account-menu__item--selected" role="menuitem">
+              <svg viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg" aria-hidden="true">
+                <path d="M12.22 2h-.44a2 2 0 0 0-2 2v.18a2 2 0 0 1-1 1.73l-.43.25a2 2 0 0 1-2 0l-.15-.08a2 2 0 0 0-2.73.73l-.22.38a2 2 0 0 0 .73 2.73l.15.1a2 2 0 0 1 1 1.72v.51a2 2 0 0 1-1 1.74l-.15.09a2 2 0 0 0-.73 2.73l.22.38a2 2 0 0 0 2.73.73l.15-.08a2 2 0 0 1 2 0l.43.25a2 2 0 0 1 1 1.73V20a2 2 0 0 0 2 2h.44a2 2 0 0 0 2-2v-.18a2 2 0 0 1 1-1.73l.43-.25a2 2 0 0 1 2 0l.15.08a2 2 0 0 0 2.73-.73l.22-.39a2 2 0 0 0-.73-2.73l-.15-.08a2 2 0 0 1-1-1.74v-.5a2 2 0 0 1 1-1.74l.15-.09a2 2 0 0 0 .73-2.73l-.22-.38a2 2 0 0 0-2.73-.73l-.15.08a2 2 0 0 1-2 0l-.43-.25a2 2 0 0 1-1-1.73V4a2 2 0 0 0-2-2z" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+                <circle cx="12" cy="12" r="3" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+              </svg>
+              Account settings
+            </li>
+            <li class="ss-account-menu__item" role="menuitem">
+              <svg viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg" aria-hidden="true">
+                <path d="M9 21H5a2 2 0 0 1-2-2V5a2 2 0 0 1 2-2h4" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+                <polyline points="16 17 21 12 16 7" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+                <line x1="21" y1="12" x2="9" y2="12" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+              </svg>
+              Log out
+            </li>
+          </ul>
+        </div>
+      </div>
+    </aside>
+
+    <div class="ss-main">
+      <header class="ss-appbar">
+        <div class="ss-appbar__inner">
+          <h1 class="ss-appbar__title">Settings</h1>
+          <div class="ss-appbar__account">
+            <span>Acme Global</span>
+            <span class="ss-appbar__avatar-lg" aria-hidden="true">JS</span>
+          </div>
+        </div>
+      </header>
+
+      <nav class="ss-tabs" aria-label="Settings sections">
+        <a class="ss-tab" href="overview.html">
+          <svg viewBox="0 0 12 14" xmlns="http://www.w3.org/2000/svg" aria-hidden="true"><path d="M4.156 13.2l-.012-.001L.6 13.2c-.331 0-.6-.269-.6-.6V7.267c0-.332.269-.6.6-.6l2.956-.001V.6c0-.331.269-.6.6-.6h3.555c.332 0 .6.269.6.6v2.733h2.956c.331 0 .6.269.6.6V12.6c0 .331-.269.6-.6.6H4.156zm2.955-12H4.756V12h2.355V1.2zm3.556 3.333H8.31V12h2.356V4.533zM3.555 7.867H1.2V12h2.355V7.867z" fill="currentColor"/></svg>
+          Overview
+        </a>
+        <a class="ss-tab ss-tab--active" href="people.html">
+          <svg viewBox="0 0 16 16" fill="none" xmlns="http://www.w3.org/2000/svg" aria-hidden="true"><circle cx="5.5" cy="6" r="2.25" stroke="currentColor" stroke-width="1.2" fill="none"/><path d="M2 13v-.25c0-1.52 1.57-2.75 3.5-2.75S9 11.23 9 12.75V13" stroke="currentColor" stroke-width="1.2" stroke-linecap="round" fill="none"/><circle cx="11.5" cy="5.75" r="1.85" stroke="currentColor" stroke-width="1.2" fill="none"/><path d="M8.5 12.25c.26-1.23 1.57-2.15 3-2.15.45 0 .88.08 1.27.22" stroke="currentColor" stroke-width="1.2" stroke-linecap="round" fill="none"/></svg>
+          People
+        </a>
+        <a class="ss-tab" href="api-mcp.html">
+          <svg viewBox="0 0 16 16" fill="none" xmlns="http://www.w3.org/2000/svg" aria-hidden="true"><circle cx="8" cy="8" r="6.2" stroke="currentColor" stroke-width="1.2" fill="none"/><ellipse cx="8" cy="8" rx="2" ry="6.2" stroke="currentColor" stroke-width="1.15" fill="none"/><path d="M1.85 8h12.3" stroke="currentColor" stroke-width="1.15"/><path d="M2.65 11.05h10.7M2.65 4.95h10.7" stroke="currentColor" stroke-width="1"/></svg>
+          API &amp; MCP
+        </a>
+      </nav>
+
+      <section class="ss-page-head" aria-labelledby="page-title">
+        <div class="ss-page-head__divider">
+          <h2 id="page-title" class="ss-page-head__title">People</h2>
+          <p class="ss-page-head__sub">
+            Manage user access and roles for your organisation. Inviting people gives them access to <strong>GWI Octopus.</strong>
+          </p>
+        </div>
+      </section>
+
+      <div class="ss-people-main">
+        <div class="ss-people-toolbar">
+          <div class="ss-search-bar" role="search">
+            <svg class="ss-search-bar__icon" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg" aria-hidden="true">
+              <circle cx="11" cy="11" r="8" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+              <path d="m21 21-4.3-4.3" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+            </svg>
+            <label class="ss-visually-hidden" for="people-search">Search people</label>
+            <input id="people-search" class="ss-search-bar__input" type="search" placeholder="Search by name or email...." autocomplete="off">
+          </div>
+          <button type="button" class="ss-btn-invite" id="invite-member-open" aria-haspopup="dialog" aria-controls="invite-member-modal">
+            <svg viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg" aria-hidden="true">
+              <circle cx="9" cy="7" r="4" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+              <path d="M3 21v-2a4 4 0 0 1 4-4h4a4 4 0 0 1 4 4v2" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+              <path d="M16 11h6M19 8v6" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+            </svg>
+            Invite member
+          </button>
+        </div>
+
+        <div class="ss-people-table-shell">
+          <table class="ss-people-table">
+            <colgroup>
+              <col class="ss-people-col-select" />
+              <col class="ss-people-col-name" />
+              <col class="ss-people-col-role" />
+              <col class="ss-people-col-login" />
+              <col class="ss-people-col-actions" />
+            </colgroup>
+            <thead>
+              <tr>
+                <th scope="col" class="ss-people-th-select">
+                  <label class="ss-checkbox">
+                    <input type="checkbox" class="ss-checkbox__input js-people-select-all" aria-label="Select all rows">
+                    <span class="ss-checkbox__box" aria-hidden="true">
+                      <svg class="ss-checkbox__check" width="10" height="8" viewBox="0 0 10 8" fill="none" xmlns="http://www.w3.org/2000/svg" aria-hidden="true">
+                        <path d="M1 4l2.5 2.5L9 1" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/>
+                      </svg>
+                    </span>
+                  </label>
+                </th>
+                <th scope="col">Name</th>
+                <th scope="col">Role</th>
+                <th scope="col">Last Login</th>
+                <th scope="col" class="ss-people-th-actions"><span class="ss-visually-hidden">Actions</span></th>
+              </tr>
+            </thead>
+            <tbody>
+              <tr>
+                <td class="ss-people-cell-select">
+                  <label class="ss-checkbox">
+                    <input type="checkbox" class="ss-checkbox__input js-people-row-check" aria-label="Select John Doe" disabled>
+                    <span class="ss-checkbox__box" aria-hidden="true">
+                      <svg class="ss-checkbox__check" width="10" height="8" viewBox="0 0 10 8" fill="none" xmlns="http://www.w3.org/2000/svg" aria-hidden="true">
+                        <path d="M1 4l2.5 2.5L9 1" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/>
+                      </svg>
+                    </span>
+                  </label>
+                </td>
+                <td class="ss-people-cell-name">
+                  <div class="ss-people-name">John Doe</div>
+                  <div class="ss-people-email">john.doe@acmeglobal.com</div>
+                </td>
+                <td><span class="ss-role-chip ss-role-chip--admin">Admin</span></td>
+                <td class="ss-people-last-login">1 hour ago</td>
+                <td class="ss-people-actions ss-people-actions--empty">
+                  <span class="ss-visually-hidden">Actions unavailable — sole administrator</span>
+                </td>
+              </tr>
+              <tr>
+                <td class="ss-people-cell-select">
+                  <label class="ss-checkbox">
+                    <input type="checkbox" class="ss-checkbox__input js-people-row-check" aria-label="Select Jane Donald">
+                    <span class="ss-checkbox__box" aria-hidden="true">
+                      <svg class="ss-checkbox__check" width="10" height="8" viewBox="0 0 10 8" fill="none" xmlns="http://www.w3.org/2000/svg" aria-hidden="true">
+                        <path d="M1 4l2.5 2.5L9 1" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/>
+                      </svg>
+                    </span>
+                  </label>
+                </td>
+                <td class="ss-people-cell-name">
+                  <div class="ss-people-name">Jane Donald</div>
+                  <div class="ss-people-email">john.donald@acmeglobal.com</div>
+                </td>
+                <td><span class="ss-role-chip ss-role-chip--member">Member</span></td>
+                <td class="ss-people-last-login">1 hour ago</td>
+                <td class="ss-people-actions">
+                  <span class="ss-people-actions-hit">
+                    <button type="button" class="ss-btn-more js-people-actions-trigger" aria-haspopup="true" aria-expanded="false" aria-controls="people-actions-menu" aria-label="Actions for Jane Donald">
+                      <svg viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg" aria-hidden="true"><circle cx="12" cy="6" r="1.6" fill="currentColor"/><circle cx="12" cy="12" r="1.6" fill="currentColor"/><circle cx="12" cy="18" r="1.6" fill="currentColor"/></svg>
+                    </button>
+                  </span>
+                </td>
+              </tr>
+              <tr>
+                <td class="ss-people-cell-select">
+                  <label class="ss-checkbox">
+                    <input type="checkbox" class="ss-checkbox__input js-people-row-check" aria-label="Select Eric Price">
+                    <span class="ss-checkbox__box" aria-hidden="true">
+                      <svg class="ss-checkbox__check" width="10" height="8" viewBox="0 0 10 8" fill="none" xmlns="http://www.w3.org/2000/svg" aria-hidden="true">
+                        <path d="M1 4l2.5 2.5L9 1" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/>
+                      </svg>
+                    </span>
+                  </label>
+                </td>
+                <td class="ss-people-cell-name">
+                  <div class="ss-people-name">Eric Price</div>
+                  <div class="ss-people-email">eric.price@acmeglobal.com</div>
+                </td>
+                <td><span class="ss-role-chip ss-role-chip--member">Member</span></td>
+                <td class="ss-people-last-login">2 days ago</td>
+                <td class="ss-people-actions">
+                  <span class="ss-people-actions-hit">
+                    <button type="button" class="ss-btn-more js-people-actions-trigger" aria-haspopup="true" aria-expanded="false" aria-controls="people-actions-menu" aria-label="Actions for Eric Price">
+                      <svg viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg" aria-hidden="true"><circle cx="12" cy="6" r="1.6" fill="currentColor"/><circle cx="12" cy="12" r="1.6" fill="currentColor"/><circle cx="12" cy="18" r="1.6" fill="currentColor"/></svg>
+                    </button>
+                  </span>
+                </td>
+              </tr>
+              <tr>
+                <td class="ss-people-cell-select">
+                  <label class="ss-checkbox">
+                    <input type="checkbox" class="ss-checkbox__input js-people-row-check" aria-label="Select Martin Murphy">
+                    <span class="ss-checkbox__box" aria-hidden="true">
+                      <svg class="ss-checkbox__check" width="10" height="8" viewBox="0 0 10 8" fill="none" xmlns="http://www.w3.org/2000/svg" aria-hidden="true">
+                        <path d="M1 4l2.5 2.5L9 1" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/>
+                      </svg>
+                    </span>
+                  </label>
+                </td>
+                <td class="ss-people-cell-name">
+                  <div class="ss-people-name">Martin Murphy</div>
+                  <div class="ss-people-email">martin.murphy@acmeglobal.com</div>
+                </td>
+                <td><span class="ss-role-chip ss-role-chip--member">Member</span></td>
+                <td class="ss-people-last-login">1 week ago</td>
+                <td class="ss-people-actions">
+                  <span class="ss-people-actions-hit">
+                    <button type="button" class="ss-btn-more js-people-actions-trigger" aria-haspopup="true" aria-expanded="false" aria-controls="people-actions-menu" aria-label="Actions for Martin Murphy">
+                      <svg viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg" aria-hidden="true"><circle cx="12" cy="6" r="1.6" fill="currentColor"/><circle cx="12" cy="12" r="1.6" fill="currentColor"/><circle cx="12" cy="18" r="1.6" fill="currentColor"/></svg>
+                    </button>
+                  </span>
+                </td>
+              </tr>
+              <tr>
+                <td class="ss-people-cell-select">
+                  <label class="ss-checkbox">
+                    <input type="checkbox" class="ss-checkbox__input js-people-row-check" aria-label="Select Lucas Cooper">
+                    <span class="ss-checkbox__box" aria-hidden="true">
+                      <svg class="ss-checkbox__check" width="10" height="8" viewBox="0 0 10 8" fill="none" xmlns="http://www.w3.org/2000/svg" aria-hidden="true">
+                        <path d="M1 4l2.5 2.5L9 1" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/>
+                      </svg>
+                    </span>
+                  </label>
+                </td>
+                <td class="ss-people-cell-name">
+                  <div class="ss-people-name">Lucas Cooper</div>
+                  <div class="ss-people-email">lucas.cooper@acmeglobal.com</div>
+                </td>
+                <td><span class="ss-role-chip ss-role-chip--member">Member</span></td>
+                <td class="ss-people-last-login">2 months ago</td>
+                <td class="ss-people-actions">
+                  <span class="ss-people-actions-hit">
+                    <button type="button" class="ss-btn-more js-people-actions-trigger" aria-haspopup="true" aria-expanded="false" aria-controls="people-actions-menu" aria-label="Actions for Lucas Cooper">
+                      <svg viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg" aria-hidden="true"><circle cx="12" cy="6" r="1.6" fill="currentColor"/><circle cx="12" cy="12" r="1.6" fill="currentColor"/><circle cx="12" cy="18" r="1.6" fill="currentColor"/></svg>
+                    </button>
+                  </span>
+                </td>
+              </tr>
+              <tr>
+                <td class="ss-people-cell-select">
+                  <label class="ss-checkbox">
+                    <input type="checkbox" class="ss-checkbox__input js-people-row-check" aria-label="Select Mia Cox">
+                    <span class="ss-checkbox__box" aria-hidden="true">
+                      <svg class="ss-checkbox__check" width="10" height="8" viewBox="0 0 10 8" fill="none" xmlns="http://www.w3.org/2000/svg" aria-hidden="true">
+                        <path d="M1 4l2.5 2.5L9 1" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/>
+                      </svg>
+                    </span>
+                  </label>
+                </td>
+                <td class="ss-people-cell-name">
+                  <div class="ss-people-name">Mia Cox</div>
+                  <div class="ss-people-email">mia.cox@acmeglobal.com</div>
+                </td>
+                <td><span class="ss-role-chip ss-role-chip--member">Member</span></td>
+                <td class="ss-people-last-login">3 years ago</td>
+                <td class="ss-people-actions">
+                  <span class="ss-people-actions-hit">
+                    <button type="button" class="ss-btn-more js-people-actions-trigger" aria-haspopup="true" aria-expanded="false" aria-controls="people-actions-menu" aria-label="Actions for Mia Cox">
+                      <svg viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg" aria-hidden="true"><circle cx="12" cy="6" r="1.6" fill="currentColor"/><circle cx="12" cy="12" r="1.6" fill="currentColor"/><circle cx="12" cy="18" r="1.6" fill="currentColor"/></svg>
+                    </button>
+                  </span>
+                </td>
+              </tr>
+              <tr>
+                <td class="ss-people-cell-select">
+                  <label class="ss-checkbox">
+                    <input type="checkbox" class="ss-checkbox__input js-people-row-check" aria-label="Select Sophia Torres">
+                    <span class="ss-checkbox__box" aria-hidden="true">
+                      <svg class="ss-checkbox__check" width="10" height="8" viewBox="0 0 10 8" fill="none" xmlns="http://www.w3.org/2000/svg" aria-hidden="true">
+                        <path d="M1 4l2.5 2.5L9 1" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/>
+                      </svg>
+                    </span>
+                  </label>
+                </td>
+                <td class="ss-people-cell-name">
+                  <div class="ss-people-name">Sophia Torres</div>
+                  <div class="ss-people-email">sophia.torres@acmeglobal.com</div>
+                </td>
+                <td><span class="ss-role-chip ss-role-chip--member">Member</span></td>
+                <td class="ss-people-last-login">2 minutes ago</td>
+                <td class="ss-people-actions">
+                  <span class="ss-people-actions-hit">
+                    <button type="button" class="ss-btn-more js-people-actions-trigger" aria-haspopup="true" aria-expanded="false" aria-controls="people-actions-menu" aria-label="Actions for Sophia Torres">
+                      <svg viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg" aria-hidden="true"><circle cx="12" cy="6" r="1.6" fill="currentColor"/><circle cx="12" cy="12" r="1.6" fill="currentColor"/><circle cx="12" cy="18" r="1.6" fill="currentColor"/></svg>
+                    </button>
+                  </span>
+                </td>
+              </tr>
+              <tr>
+                <td class="ss-people-cell-select">
+                  <label class="ss-checkbox">
+                    <input type="checkbox" class="ss-checkbox__input js-people-row-check" aria-label="Select William Peterson">
+                    <span class="ss-checkbox__box" aria-hidden="true">
+                      <svg class="ss-checkbox__check" width="10" height="8" viewBox="0 0 10 8" fill="none" xmlns="http://www.w3.org/2000/svg" aria-hidden="true">
+                        <path d="M1 4l2.5 2.5L9 1" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/>
+                      </svg>
+                    </span>
+                  </label>
+                </td>
+                <td class="ss-people-cell-name">
+                  <div class="ss-people-name">William Peterson</div>
+                  <div class="ss-people-email">william.peterson@acmeglobal.com</div>
+                </td>
+                <td><span class="ss-role-chip ss-role-chip--member">Member</span></td>
+                <td class="ss-people-last-login">1 hour ago</td>
+                <td class="ss-people-actions">
+                  <span class="ss-people-actions-hit">
+                    <button type="button" class="ss-btn-more js-people-actions-trigger" aria-haspopup="true" aria-expanded="false" aria-controls="people-actions-menu" aria-label="Actions for William Peterson">
+                      <svg viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg" aria-hidden="true"><circle cx="12" cy="6" r="1.6" fill="currentColor"/><circle cx="12" cy="12" r="1.6" fill="currentColor"/><circle cx="12" cy="18" r="1.6" fill="currentColor"/></svg>
+                    </button>
+                  </span>
+                </td>
+              </tr>
+            </tbody>
+          </table>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!-- Invite member (Figma: Self-serve — Octopus, node 118:32583 modal) -->
+  <div id="invite-member-modal" class="ss-invite-modal" role="dialog" aria-modal="true" aria-labelledby="invite-modal-title" hidden aria-hidden="true">
+    <div class="ss-invite-modal__backdrop js-invite-modal-close" tabindex="-1" aria-hidden="true"></div>
+    <div class="ss-invite-modal__panel js-invite-modal-panel" tabindex="-1">
+      <div class="ss-invite-modal__header">
+        <h3 id="invite-modal-title" class="ss-invite-modal__title">Invite team member</h3>
+        <button type="button" class="ss-invite-modal__close ss-btn-icon js-invite-modal-close" aria-label="Close dialog">
+          <svg width="16" height="16" viewBox="0 0 16 16" fill="none" xmlns="http://www.w3.org/2000/svg" aria-hidden="true">
+            <path d="M13.854 3.646a.5.5 0 010 .708L9.707 8l4.147 4.646a.5.5 0 01-.708.708L9 8.707l-4.146 4.647a.5.5 0 11-.708-.708L8.293 8 3.147 3.354a.5.5 0 11.708-.708L9 7.293l4.146-4.647a.5.5 0 01.708 0z" fill="currentColor"/>
+          </svg>
+        </button>
+      </div>
+
+      <form class="ss-invite-modal__form" id="invite-member-form" novalidate>
+        <p class="ss-invite-modal__intro">Add their name and work email, then pick a role. We’ll send them a link to accept and join your organisation in GWI Octopus.</p>
+
+        <div class="ss-invite-modal__row-two">
+          <div class="ss-invite-field">
+            <label class="ss-invite-field__label" for="invite-first-name">First name</label>
+            <input id="invite-first-name" name="firstName" type="text" class="ss-invite-field__input" placeholder="e.g. Jamie" autocomplete="given-name" aria-required="true">
+            <p id="invite-first-name-error" class="ss-invite-field__error" role="alert" hidden></p>
+          </div>
+          <div class="ss-invite-field">
+            <label class="ss-invite-field__label" for="invite-last-name">Last name</label>
+            <input id="invite-last-name" name="lastName" type="text" class="ss-invite-field__input" placeholder="e.g. Jones" autocomplete="family-name" aria-required="true">
+            <p id="invite-last-name-error" class="ss-invite-field__error" role="alert" hidden></p>
+          </div>
+        </div>
+
+        <div class="ss-invite-field">
+          <label class="ss-invite-field__label" for="invite-email">Email address</label>
+          <input id="invite-email" name="email" type="email" class="ss-invite-field__input" placeholder="name@yourcompany.com" autocomplete="email" aria-required="true" aria-describedby="invite-email-desc">
+          <p id="invite-email-error" class="ss-invite-field__error" role="alert" hidden></p>
+          <p id="invite-email-desc" class="ss-invite-field__hint">Must be a work email address.</p>
+        </div>
+
+        <div class="ss-invite-field">
+          <label class="ss-invite-field__label" for="invite-role">Role</label>
+          <div class="ss-invite-select-wrap">
+            <select id="invite-role" name="role" class="ss-invite-field__select" aria-required="true">
+              <option value="" selected>Select role</option>
+              <option value="admin">Admin</option>
+              <option value="member">Member</option>
+            </select>
+            <svg class="ss-invite-select__chevron" width="16" height="16" viewBox="0 0 16 16" fill="none" xmlns="http://www.w3.org/2000/svg" aria-hidden="true">
+              <path d="M4 6l4 4 4-4" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/>
+            </svg>
+          </div>
+          <p id="invite-role-error" class="ss-invite-field__error" role="alert" hidden></p>
+        </div>
+
+        <div class="ss-invite-modal__note" role="status">
+          <p class="ss-invite-note-title">What happens next:</p>
+          <p class="ss-invite-note-line">An invitation email will be sent immediately</p>
+          <p class="ss-invite-note-line">The invitee has 7 days to accept before it expires</p>
+        </div>
+
+        <div class="ss-invite-modal__footer">
+          <button type="button" class="ss-btn-cancel js-invite-modal-close">Cancel</button>
+          <button type="submit" class="ss-btn-invite-submit">Invite member</button>
+        </div>
+      </form>
+    </div>
+  </div>
+
+  <!-- Change role — single member (Figma: 484:44459 default, 559:27874 hover, 559:28317 selected, 484:45851 success toast) -->
+  <div id="change-role-modal" class="ss-change-role-modal" role="dialog" aria-modal="true" aria-labelledby="change-role-modal-title" hidden aria-hidden="true">
+    <div class="ss-change-role-modal__backdrop js-change-role-close" tabindex="-1" aria-hidden="true"></div>
+    <div class="ss-change-role-modal__panel js-change-role-panel" tabindex="-1">
+      <div class="ss-change-role-modal__header">
+        <h3 id="change-role-modal-title" class="ss-change-role-modal__title">Change role</h3>
+        <button type="button" class="ss-change-role-modal__close ss-btn-icon js-change-role-close" aria-label="Close dialog">
+          <svg width="16" height="16" viewBox="0 0 16 16" fill="none" xmlns="http://www.w3.org/2000/svg" aria-hidden="true">
+            <path d="M13.854 3.646a.5.5 0 010 .708L9.707 8l4.147 4.646a.5.5 0 01-.708.708L9 8.707l-4.146 4.647a.5.5 0 11-.708-.708L8.293 8 3.147 3.354a.5.5 0 11.708-.708L9 7.293l4.146-4.647a.5.5 0 01.708 0z" fill="currentColor"/>
+          </svg>
+        </button>
+      </div>
+      <div class="ss-change-role-modal__body">
+        <p class="ss-change-role-modal__intro">Changing role for <strong class="js-change-role-name"></strong></p>
+        <div class="ss-change-role-cards" role="radiogroup" aria-label="Choose role">
+          <div class="ss-change-role-card ss-change-role-card--current" data-change-role-card="current" aria-disabled="true">
+            <div class="ss-change-role-card__main">
+              <div class="ss-change-role-card__title-row">
+                <span class="js-change-role-current-label ss-change-role-card__heading"></span>
+                <span class="ss-change-role-chip">Current role</span>
+              </div>
+              <p class="ss-change-role-card__desc">Standard access to Octopus features</p>
+            </div>
+            <span class="ss-change-role-card__tick ss-change-role-card__tick--current" aria-hidden="true">
+              <svg width="16" height="16" viewBox="0 0 16 16" fill="none" xmlns="http://www.w3.org/2000/svg" aria-hidden="true">
+                <path d="M13.5 4.5L6 12 2.5 8.5" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+              </svg>
+            </span>
+          </div>
+          <button type="button" class="ss-change-role-card ss-change-role-card--option js-change-role-option" data-change-role-card="alternate" aria-pressed="false">
+            <span class="ss-change-role-card__main">
+              <span class="js-change-role-alt-label ss-change-role-card__heading"></span>
+              <span class="js-change-role-alt-desc ss-change-role-card__desc">Standard access to Octopus features</span>
+            </span>
+            <span class="ss-change-role-card__tick ss-change-role-card__tick--alternate" aria-hidden="true">
+              <svg width="16" height="16" viewBox="0 0 16 16" fill="none" xmlns="http://www.w3.org/2000/svg" aria-hidden="true">
+                <path d="M13.5 4.5L6 12 2.5 8.5" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+              </svg>
+            </span>
+          </button>
+        </div>
+        <div class="ss-change-role-modal__footer">
+          <button type="button" class="ss-btn-cancel js-change-role-close">Cancel</button>
+          <button type="button" class="ss-btn-change-role-continue js-change-role-continue" disabled>Continue</button>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!-- Bulk change role (Figma 589:35985) -->
+  <div id="bulk-change-role-modal" class="ss-change-role-modal" role="dialog" aria-modal="true" aria-labelledby="bulk-change-role-modal-title" hidden aria-hidden="true">
+    <div class="ss-change-role-modal__backdrop js-bulk-change-role-close" tabindex="-1" aria-hidden="true"></div>
+    <div class="ss-change-role-modal__panel js-bulk-change-role-panel" tabindex="-1">
+      <div class="ss-change-role-modal__header">
+        <h3 id="bulk-change-role-modal-title" class="ss-change-role-modal__title">Change role</h3>
+        <button type="button" class="ss-change-role-modal__close ss-btn-icon js-bulk-change-role-close" aria-label="Close dialog">
+          <svg width="16" height="16" viewBox="0 0 16 16" fill="none" xmlns="http://www.w3.org/2000/svg" aria-hidden="true">
+            <path d="M13.854 3.646a.5.5 0 010 .708L9.707 8l4.147 4.646a.5.5 0 01-.708.708L9 8.707l-4.146 4.647a.5.5 0 11-.708-.708L8.293 8 3.147 3.354a.5.5 0 11.708-.708L9 7.293l4.146-4.647a.5.5 0 01.708 0z" fill="currentColor"/>
+          </svg>
+        </button>
+      </div>
+      <div class="ss-change-role-modal__body">
+        <p class="ss-change-role-modal__intro">Changing role for <strong><span class="js-bulk-change-role-count">0</span> people</strong></p>
+        <div class="ss-change-role-cards ss-bulk-change-role-cards" role="radiogroup" aria-label="Choose role for selected people">
+          <button type="button" class="ss-change-role-card ss-change-role-card--option js-bulk-change-role-choice" data-bulk-role="admin" aria-pressed="false">
+            <span class="ss-change-role-card__main">
+              <span class="ss-change-role-card__heading">Make all Admin</span>
+              <span class="ss-change-role-card__desc">Full access to manage users and settings</span>
+            </span>
+            <span class="ss-change-role-card__tick js-bulk-change-role-tick" aria-hidden="true">
+              <svg width="16" height="16" viewBox="0 0 16 16" fill="none" xmlns="http://www.w3.org/2000/svg" aria-hidden="true">
+                <path d="M13.5 4.5L6 12 2.5 8.5" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+              </svg>
+            </span>
+          </button>
+          <button type="button" class="ss-change-role-card ss-change-role-card--option js-bulk-change-role-choice" data-bulk-role="member" aria-pressed="false" aria-describedby="bulk-change-role-member-hint">
+            <span class="ss-change-role-card__main">
+              <span class="ss-change-role-card__heading">Make all Member</span>
+              <span class="ss-change-role-card__desc">Standard access to Octopus features</span>
+            </span>
+            <span class="ss-change-role-card__tick js-bulk-change-role-tick" aria-hidden="true">
+              <svg width="16" height="16" viewBox="0 0 16 16" fill="none" xmlns="http://www.w3.org/2000/svg" aria-hidden="true">
+                <path d="M13.5 4.5L6 12 2.5 8.5" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+              </svg>
+            </span>
+          </button>
+        </div>
+        <p id="bulk-change-role-member-hint" class="ss-bulk-change-role-hint" hidden role="note">Your organisation must keep at least one administrator. Deselect the administrator or choose Make all Admin.</p>
+        <div class="ss-change-role-modal__footer">
+          <button type="button" class="ss-btn-cancel js-bulk-change-role-close">Cancel</button>
+          <button type="button" class="ss-btn-change-role-continue js-bulk-change-role-continue" disabled>Continue</button>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!-- Remove member (Figma: Self-serve — Octopus, ❖ Dialog modal 118:30919; blanket 118:30920) -->
+  <div id="remove-member-modal" class="ss-remove-member-modal" role="dialog" aria-modal="true" aria-labelledby="remove-member-modal-title" hidden aria-hidden="true">
+    <div class="ss-remove-member-modal__backdrop js-remove-member-close" tabindex="-1" aria-hidden="true"></div>
+    <div class="ss-remove-member-modal__panel js-remove-member-panel" tabindex="-1">
+      <div class="ss-remove-member-modal__header">
+        <h3 id="remove-member-modal-title" class="ss-remove-member-modal__title">Remove member</h3>
+        <button type="button" class="ss-remove-member-modal__close ss-btn-icon js-remove-member-close" aria-label="Close dialog">
+          <svg width="16" height="16" viewBox="0 0 16 16" fill="none" xmlns="http://www.w3.org/2000/svg" aria-hidden="true">
+            <path d="M13.854 3.646a.5.5 0 010 .708L9.707 8l4.147 4.646a.5.5 0 01-.708.708L9 8.707l-4.146 4.647a.5.5 0 11-.708-.708L8.293 8 3.147 3.354a.5.5 0 11.708-.708L9 7.293l4.146-4.647a.5.5 0 01.708 0z" fill="currentColor"/>
+          </svg>
+        </button>
+      </div>
+      <div class="ss-remove-member-modal__warning" role="status">
+        <span class="ss-remove-member-modal__warning-icon" aria-hidden="true">
+          <svg width="16" height="16" viewBox="0 0 16 16" fill="none" xmlns="http://www.w3.org/2000/svg">
+            <path d="M8 1.5L1.5 13.5h13L8 1.5z" stroke="#d20000" stroke-width="1.2" stroke-linejoin="round" fill="none"/>
+            <path d="M8 6v3.5M8 11.2h.01" stroke="#d20000" stroke-width="1.5" stroke-linecap="round"/>
+          </svg>
+        </span>
+        <p class="ss-remove-member-modal__warning-text">This will revoke Octopus access</p>
+      </div>
+      <div class="ss-remove-member-modal__body">
+        <div class="ss-remove-member-modal__copy">
+          <p class="ss-remove-member-modal__lead js-remove-member-lead"></p>
+          <p class="ss-remove-member-modal__copy-spacer" aria-hidden="true">&#8203;</p>
+          <p class="ss-remove-member-modal__copy-muted">They will still retain any existing access to the GWI platform.</p>
+        </div>
+      </div>
+      <div class="ss-remove-member-modal__footer-stack">
+        <div class="ss-remove-member-modal__ack-row">
+          <label class="ss-checkbox">
+            <input id="remove-member-acknowledge" type="checkbox" class="ss-checkbox__input js-remove-member-ack" autocomplete="off" aria-labelledby="remove-member-ack-label">
+            <span class="ss-checkbox__box" aria-hidden="true">
+              <svg class="ss-checkbox__check" width="10" height="8" viewBox="0 0 10 8" fill="none" xmlns="http://www.w3.org/2000/svg" aria-hidden="true">
+                <path d="M1 4l2.5 2.5L9 1" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/>
+              </svg>
+            </span>
+          </label>
+          <label id="remove-member-ack-label" class="ss-remove-member-modal__ack-label js-remove-member-ack-label" for="remove-member-acknowledge">I understand that removing the member will revoke their access</label>
+        </div>
+        <div class="ss-remove-member-modal__actions">
+          <button type="button" class="ss-btn-cancel js-remove-member-close">Cancel</button>
+          <button type="button" class="ss-btn-remove-confirm js-remove-member-confirm" disabled>Confirm</button>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!-- Invite success toast (Figma node 559:35603 — Notification success) -->
+  <div id="invite-success-toast" class="ss-toast ss-toast--success" hidden aria-hidden="true" role="status" aria-live="polite" aria-atomic="true">
+    <span class="ss-toast__icon" aria-hidden="true">
+      <svg width="20" height="20" viewBox="0 0 20 20" fill="none" xmlns="http://www.w3.org/2000/svg">
+        <path d="M16.667 5L7.5 14.167 3.333 10" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+      </svg>
+    </span>
+    <span class="ss-toast__message js-invite-toast-message"></span>
+  </div>
+
+  <div id="role-change-success-toast" class="ss-toast ss-toast--success" hidden aria-hidden="true" role="status" aria-live="polite" aria-atomic="true">
+    <span class="ss-toast__icon" aria-hidden="true">
+      <svg width="20" height="20" viewBox="0 0 20 20" fill="none" xmlns="http://www.w3.org/2000/svg">
+        <path d="M16.667 5L7.5 14.167 3.333 10" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+      </svg>
+    </span>
+    <span class="ss-toast__message js-role-change-toast-message"></span>
+  </div>
+
+  <!-- Bulk selection bar (Figma: People page/Bulk select) -->
+  <div id="people-bulk-bar" class="ss-people-bulk-bar" role="region" aria-label="Bulk member actions" hidden aria-hidden="true">
+    <p class="ss-people-bulk-summary" aria-live="polite">
+      <span class="ss-people-bulk-badge"><span id="bulk-count-badge">0</span></span>
+      <span class="ss-people-bulk-text" id="bulk-summary-text"><span id="bulk-count-inline">0</span> members selected</span>
+    </p>
+    <span class="ss-people-bulk-divider" aria-hidden="true"></span>
+    <button type="button" class="ss-people-bulk-btn js-bulk-change-role-open" disabled aria-disabled="true">
+      <svg viewBox="0 0 16 16" fill="none" xmlns="http://www.w3.org/2000/svg" aria-hidden="true">
+        <path d="M12 5H4M4 5l2-2M4 5l2 2" stroke="currentColor" stroke-width="1.25" stroke-linecap="round" stroke-linejoin="round"/>
+        <path d="M4 11h8M12 11l-2-2M12 11l-2 2" stroke="currentColor" stroke-width="1.25" stroke-linecap="round" stroke-linejoin="round"/>
+      </svg>
+      <span class="ss-people-bulk-btn-label">Change role</span>
+      <svg class="ss-people-bulk-chevron" viewBox="0 0 16 16" fill="none" xmlns="http://www.w3.org/2000/svg" aria-hidden="true">
+        <path d="M4 6l4 4 4-4" stroke="currentColor" stroke-width="1.25" stroke-linecap="round" stroke-linejoin="round"/></svg>
+    </button>
+    <span class="ss-people-bulk-divider" aria-hidden="true"></span>
+    <button type="button" class="ss-people-bulk-danger js-bulk-remove-open" disabled aria-disabled="true">
+      <svg viewBox="0 0 16 16" fill="none" xmlns="http://www.w3.org/2000/svg" aria-hidden="true">
+        <circle cx="8" cy="5.5" r="2.25" stroke="currentColor" stroke-width="1.25"/>
+        <path d="M3.5 13.5v-.4c0-1.6 1.9-2.85 4.5-2.85.6 0 1.2.07 1.75.2" stroke="currentColor" stroke-width="1.25" stroke-linecap="round"/>
+        <path d="M2.5 2.5l11 11" stroke="currentColor" stroke-width="1.25" stroke-linecap="round"/>
+      </svg>
+      <span>Remove user</span>
+    </button>
+    <span class="ss-people-bulk-divider" aria-hidden="true"></span>
+    <button type="button" class="ss-people-bulk-dismiss" id="people-bulk-dismiss" aria-label="Clear selection">
+      <svg viewBox="0 0 16 16" fill="none" xmlns="http://www.w3.org/2000/svg" aria-hidden="true">
+        <path d="M4 4l8 8M12 4L4 12" stroke="currentColor" stroke-width="1.25" stroke-linecap="round"/>
+      </svg>
+    </button>
+  </div>
+  <div id="people-actions-backdrop" class="ss-people-actions-backdrop" hidden aria-hidden="true"></div>
+
+  <div id="people-actions-menu" class="ss-people-actions-menu" role="menu" aria-label="Member actions" hidden aria-hidden="true">
+    <button type="button" class="ss-people-actions-menu__action" role="menuitem" data-people-action="change-role">
+      <svg viewBox="0 0 16 16" fill="none" xmlns="http://www.w3.org/2000/svg" aria-hidden="true">
+        <path d="M12 5H4M4 5l2-2M4 5l2 2" stroke="currentColor" stroke-width="1.25" stroke-linecap="round" stroke-linejoin="round"/>
+        <path d="M4 11h8M12 11l-2-2M12 11l-2 2" stroke="currentColor" stroke-width="1.25" stroke-linecap="round" stroke-linejoin="round"/>
+      </svg>
+      Change role
+    </button>
+    <button type="button" class="ss-people-actions-menu__action" role="menuitem" data-people-action="remove-member">
+      <svg viewBox="0 0 16 16" fill="none" xmlns="http://www.w3.org/2000/svg" aria-hidden="true">
+        <circle cx="8" cy="5.5" r="2.25" stroke="currentColor" stroke-width="1.25"/>
+        <path d="M3.5 13.5v-.4c0-1.6 1.9-2.85 4.5-2.85.6 0 1.2.07 1.75.2" stroke="currentColor" stroke-width="1.25" stroke-linecap="round"/>
+        <path d="M2.5 2.5l11 11" stroke="currentColor" stroke-width="1.25" stroke-linecap="round"/>
+      </svg>
+      Remove user
+    </button>
+  </div>
+
+  <script>
+    (function () {
+      var table = document.querySelector('.ss-people-table');
+      var menu = document.getElementById('people-actions-menu');
+      var backdrop = document.getElementById('people-actions-backdrop');
+      if (!table || !menu || !backdrop) {
+        return;
+      }
+
+      var triggers = table.querySelectorAll('tbody button.js-people-actions-trigger');
+
+      function isTableTrigger(btn) {
+        return btn && btn.closest('.ss-people-table') === table && !!btn.closest('tbody');
+      }
+
+      var openTrigger = null;
+
+      function close() {
+        if (openTrigger) {
+          openTrigger.setAttribute('aria-expanded', 'false');
+          openTrigger = null;
+        }
+        menu.setAttribute('hidden', '');
+        menu.setAttribute('aria-hidden', 'true');
+        menu.removeAttribute('style');
+        backdrop.setAttribute('hidden', '');
+        backdrop.setAttribute('aria-hidden', 'true');
+      }
+
+      function positionMenu(trigger) {
+        menu.removeAttribute('hidden');
+        menu.setAttribute('aria-hidden', 'false');
+        backdrop.removeAttribute('hidden');
+        backdrop.setAttribute('aria-hidden', 'false');
+
+        requestAnimationFrame(function () {
+          var rect = trigger.getBoundingClientRect();
+          var gap = 4;
+          var mw = menu.offsetWidth;
+          var mh = menu.offsetHeight;
+          var left = rect.left - mw - gap;
+          var top = rect.top + rect.height / 2 - mh / 2;
+
+          if (left < 8) {
+            left = rect.right + gap;
+          }
+          if (left + mw > window.innerWidth - 8) {
+            left = Math.max(8, window.innerWidth - mw - 8);
+          }
+          if (top < 8) {
+            top = 8;
+          }
+          if (top + mh > window.innerHeight - 8) {
+            top = Math.max(8, window.innerHeight - mh - 8);
+          }
+
+          menu.style.left = left + 'px';
+          menu.style.top = top + 'px';
+        });
+      }
+
+      triggers.forEach(function (btn) {
+        btn.addEventListener('click', function (e) {
+          e.stopPropagation();
+          if (!isTableTrigger(btn)) {
+            return;
+          }
+          var wasOpen = openTrigger === btn && !menu.hasAttribute('hidden');
+          close();
+          if (wasOpen) {
+            return;
+          }
+          openTrigger = btn;
+          btn.setAttribute('aria-expanded', 'true');
+          positionMenu(btn);
+        });
+      });
+
+      backdrop.addEventListener('click', close);
+
+      document.addEventListener('keydown', function (e) {
+        if (e.key !== 'Escape') {
+          return;
+        }
+        var bulkRoleModal = document.getElementById('bulk-change-role-modal');
+        if (bulkRoleModal && !bulkRoleModal.hasAttribute('hidden')) {
+          return;
+        }
+        var changeRoleModal = document.getElementById('change-role-modal');
+        if (changeRoleModal && !changeRoleModal.hasAttribute('hidden')) {
+          return;
+        }
+        var inviteModalCheck = document.getElementById('invite-member-modal');
+        if (inviteModalCheck && !inviteModalCheck.hasAttribute('hidden')) {
+          return;
+        }
+        var removeMemberModal = document.getElementById('remove-member-modal');
+        if (removeMemberModal && !removeMemberModal.hasAttribute('hidden')) {
+          return;
+        }
+        close();
+      });
+
+      menu.querySelectorAll('.ss-people-actions-menu__action').forEach(function (item) {
+        item.addEventListener('click', function () {
+          var row = openTrigger && openTrigger.closest('tr');
+          var action = item.getAttribute('data-people-action');
+          close();
+          if (action === 'change-role' && row) {
+            document.dispatchEvent(new CustomEvent('ss-open-change-role', { detail: { row: row } }));
+          }
+          if (action === 'remove-member' && row) {
+            document.dispatchEvent(new CustomEvent('ss-open-remove-member', { detail: { rows: [row] } }));
+          }
+        });
+      });
+    })();
+
+    (function () {
+      var searchInput = document.getElementById('people-search');
+      var table = document.querySelector('.ss-people-table');
+      if (!searchInput || !table) {
+        return;
+      }
+
+      function rowMatches(tr, q) {
+        if (!q) {
+          return true;
+        }
+        var nameEl = tr.querySelector('.ss-people-name');
+        var emailEl = tr.querySelector('.ss-people-email');
+        var name = nameEl ? nameEl.textContent.trim().toLowerCase() : '';
+        var email = emailEl ? emailEl.textContent.trim().toLowerCase() : '';
+        return name.indexOf(q) !== -1 || email.indexOf(q) !== -1;
+      }
+
+      function applyPeopleSearchFilter() {
+        var q = searchInput.value.trim().toLowerCase();
+        var visibleCount = 0;
+        table.querySelectorAll('tbody tr').forEach(function (tr) {
+          var show = rowMatches(tr, q);
+          tr.classList.toggle('ss-people-row--filtered-out', !show);
+          if (!show) {
+            var cb = tr.querySelector('.js-people-row-check');
+            if (cb && !cb.disabled) {
+              cb.checked = false;
+            }
+          } else {
+            visibleCount++;
+          }
+        });
+        var headerTh = table.querySelector('thead .ss-people-th-select');
+        var selectAllInput = table.querySelector('.js-people-select-all');
+        if (headerTh) {
+          headerTh.classList.toggle('ss-people-th-select--no-visible-rows', visibleCount === 0);
+        }
+        if (selectAllInput && visibleCount === 0) {
+          selectAllInput.checked = false;
+          selectAllInput.indeterminate = false;
+        }
+        document.dispatchEvent(new CustomEvent('ss-sync-people-bulk-bar'));
+      }
+
+      searchInput.addEventListener('input', applyPeopleSearchFilter);
+      searchInput.addEventListener('search', applyPeopleSearchFilter);
+      document.addEventListener('ss-people-rows-changed', applyPeopleSearchFilter);
+      applyPeopleSearchFilter();
+    })();
+
+    (function () {
+      var table = document.querySelector('.ss-people-table');
+      var bulkBar = document.getElementById('people-bulk-bar');
+      var bulkDismiss = document.getElementById('people-bulk-dismiss');
+      var bulkBadge = document.getElementById('bulk-count-badge');
+      var bulkSummary = document.getElementById('bulk-summary-text');
+      var selectAll = document.querySelector('.js-people-select-all');
+      var bulkChangeBtn = bulkBar && bulkBar.querySelector('.js-bulk-change-role-open');
+      var bulkRemoveBtn = bulkBar && bulkBar.querySelector('.js-bulk-remove-open');
+      if (!table || !bulkBar || !bulkDismiss || !bulkBadge || !bulkSummary || !selectAll) {
+        return;
+      }
+
+      function selectableChecks() {
+        return Array.prototype.slice.call(table.querySelectorAll('.js-people-row-check')).filter(function (cb) {
+          if (cb.disabled) {
+            return false;
+          }
+          var tr = cb.closest('tr');
+          if (tr && tr.classList.contains('ss-people-row--filtered-out')) {
+            return false;
+          }
+          return true;
+        });
+      }
+
+      function selectedCount() {
+        return selectableChecks().filter(function (cb) {
+          return cb.checked;
+        }).length;
+      }
+
+      function syncBulkActions(n) {
+        if (bulkChangeBtn) {
+          bulkChangeBtn.disabled = n === 0;
+          bulkChangeBtn.setAttribute('aria-disabled', n === 0 ? 'true' : 'false');
+          bulkChangeBtn.tabIndex = n === 0 ? -1 : 0;
+        }
+        if (bulkRemoveBtn) {
+          bulkRemoveBtn.disabled = n === 0;
+          bulkRemoveBtn.setAttribute('aria-disabled', n === 0 ? 'true' : 'false');
+          bulkRemoveBtn.tabIndex = n === 0 ? -1 : 0;
+        }
+      }
+
+      function syncBulkBar(n) {
+        bulkBadge.textContent = String(n);
+        var word = n === 1 ? 'member' : 'members';
+        bulkSummary.innerHTML = '<span id="bulk-count-inline">' + n + '</span> ' + word + ' selected';
+        syncBulkActions(n);
+        if (n === 0) {
+          bulkBar.setAttribute('hidden', '');
+          bulkBar.setAttribute('aria-hidden', 'true');
+        } else {
+          bulkBar.removeAttribute('hidden');
+          bulkBar.setAttribute('aria-hidden', 'false');
+        }
+      }
+
+      function syncHeaderAndBar() {
+        var rows = selectableChecks();
+        var n = selectedCount();
+        var allOn = rows.length > 0 && n === rows.length;
+        selectAll.checked = allOn;
+        selectAll.indeterminate = n > 0 && !allOn;
+        syncBulkBar(n);
+      }
+
+      function bindRowCheckboxes() {
+        table.querySelectorAll('.js-people-row-check').forEach(function (cb) {
+          if (cb._ssPeopleRowBound) {
+            return;
+          }
+          cb._ssPeopleRowBound = true;
+          cb.addEventListener('change', syncHeaderAndBar);
+        });
+      }
+
+      bindRowCheckboxes();
+      document.addEventListener('ss-people-rows-changed', function () {
+        bindRowCheckboxes();
+        syncHeaderAndBar();
+      });
+
+      selectAll.addEventListener('change', function () {
+        var on = selectAll.checked;
+        selectableChecks().forEach(function (cb) {
+          cb.checked = on;
+        });
+        selectAll.indeterminate = false;
+        syncBulkBar(selectedCount());
+      });
+
+      bulkDismiss.addEventListener('click', function () {
+        selectableChecks().forEach(function (cb) {
+          cb.checked = false;
+        });
+        selectAll.checked = false;
+        selectAll.indeterminate = false;
+        syncBulkBar(0);
+      });
+
+      if (bulkChangeBtn) {
+        bulkChangeBtn.addEventListener('click', function () {
+          var n = selectedCount();
+          if (n === 0) {
+            return;
+          }
+          var rows = selectableChecks()
+            .filter(function (cb) {
+              return cb.checked;
+            })
+            .map(function (cb) {
+              return cb.closest('tr');
+            })
+            .filter(Boolean);
+          document.dispatchEvent(new CustomEvent('ss-open-bulk-change-role', { detail: { rows: rows } }));
+        });
+      }
+
+      if (bulkRemoveBtn) {
+        bulkRemoveBtn.addEventListener('click', function () {
+          var n = selectedCount();
+          if (n === 0) {
+            return;
+          }
+          var rows = selectableChecks()
+            .filter(function (cb) {
+              return cb.checked;
+            })
+            .map(function (cb) {
+              return cb.closest('tr');
+            })
+            .filter(Boolean)
+            .filter(function (tr) {
+              return !!(tr.querySelector('.ss-role-chip') && !tr.querySelector('.ss-role-chip--admin'));
+            });
+          if (rows.length === 0) {
+            return;
+          }
+          document.dispatchEvent(new CustomEvent('ss-open-remove-member', { detail: { rows: rows } }));
+        });
+      }
+
+      document.addEventListener('ss-sync-people-bulk-bar', syncHeaderAndBar);
+
+      syncHeaderAndBar();
+    })();
+
+    (function () {
+      var modal = document.getElementById('invite-member-modal');
+      var openBtn = document.getElementById('invite-member-open');
+      var form = document.getElementById('invite-member-form');
+      var inviteFocusRestore = null;
+      var inviteToastTimer = null;
+      var toastEl = document.getElementById('invite-success-toast');
+      var toastMsgEl = toastEl && toastEl.querySelector('.js-invite-toast-message');
+
+      function hideInviteToast() {
+        if (inviteToastTimer) {
+          clearTimeout(inviteToastTimer);
+          inviteToastTimer = null;
+        }
+        if (toastEl) {
+          toastEl.setAttribute('hidden', '');
+          toastEl.setAttribute('aria-hidden', 'true');
+        }
+      }
+
+      function showInviteSuccessToast(email) {
+        if (!toastEl || !toastMsgEl) {
+          return;
+        }
+        toastMsgEl.textContent = 'Invite sent to ' + email;
+        toastEl.removeAttribute('hidden');
+        toastEl.setAttribute('aria-hidden', 'false');
+        if (inviteToastTimer) {
+          clearTimeout(inviteToastTimer);
+        }
+        inviteToastTimer = setTimeout(function () {
+          hideInviteToast();
+        }, 5000);
+      }
+
+      var inviteFieldIds = ['invite-first-name', 'invite-last-name', 'invite-email', 'invite-role'];
+
+      function clearInviteInputError(inputId) {
+        var input = document.getElementById(inputId);
+        var errEl = document.getElementById(inputId + '-error');
+        if (!input || !errEl) {
+          return;
+        }
+        var wrap = input.closest('.ss-invite-field');
+        if (wrap) {
+          wrap.classList.remove('ss-invite-field--error');
+        }
+        errEl.textContent = '';
+        errEl.setAttribute('hidden', '');
+        input.removeAttribute('aria-invalid');
+        if (inputId === 'invite-email') {
+          input.setAttribute('aria-describedby', 'invite-email-desc');
+        } else if (inputId === 'invite-role') {
+          input.removeAttribute('aria-describedby');
+        }
+      }
+
+      function clearAllInviteFieldErrors() {
+        inviteFieldIds.forEach(function (fid) {
+          clearInviteInputError(fid);
+        });
+      }
+
+      function setInviteFieldError(inputId, message) {
+        var input = document.getElementById(inputId);
+        var errEl = document.getElementById(inputId + '-error');
+        if (!input || !errEl) {
+          return;
+        }
+        var wrap = input.closest('.ss-invite-field');
+        if (wrap) {
+          wrap.classList.add('ss-invite-field--error');
+        }
+        errEl.textContent = message;
+        errEl.removeAttribute('hidden');
+        input.setAttribute('aria-invalid', 'true');
+        if (inputId === 'invite-email') {
+          input.setAttribute('aria-describedby', 'invite-email-error invite-email-desc');
+        } else if (inputId === 'invite-role') {
+          input.setAttribute('aria-describedby', 'invite-role-error');
+        }
+      }
+
+      function validateInviteForm() {
+        clearAllInviteFieldErrors();
+        var fnEl = document.getElementById('invite-first-name');
+        var lnEl = document.getElementById('invite-last-name');
+        var emailEl = document.getElementById('invite-email');
+        var roleEl = document.getElementById('invite-role');
+        var firstFocus = null;
+        if (!fnEl || !lnEl || !emailEl || !roleEl) {
+          return false;
+        }
+        if (!fnEl.value.trim()) {
+          setInviteFieldError('invite-first-name', 'Enter first name.');
+          firstFocus = fnEl;
+        }
+        if (!lnEl.value.trim()) {
+          setInviteFieldError('invite-last-name', 'Enter last name.');
+          firstFocus = firstFocus || lnEl;
+        }
+        var emailVal = emailEl.value.trim();
+        if (!emailVal) {
+          setInviteFieldError('invite-email', 'Enter an email address.');
+          firstFocus = firstFocus || emailEl;
+        } else if (!emailEl.validity.valid) {
+          setInviteFieldError('invite-email', 'Enter a valid email address.');
+          firstFocus = firstFocus || emailEl;
+        }
+        if (!roleEl.value) {
+          setInviteFieldError('invite-role', 'Select a role.');
+          firstFocus = firstFocus || roleEl;
+        }
+        if (firstFocus && typeof firstFocus.focus === 'function') {
+          firstFocus.focus({ preventScroll: true });
+          if (typeof firstFocus.scrollIntoView === 'function') {
+            try {
+              firstFocus.scrollIntoView({ block: 'nearest', behavior: 'smooth' });
+            } catch (errSkip) {
+              firstFocus.scrollIntoView();
+            }
+          }
+        }
+        return !firstFocus;
+      }
+
+      function closeInviteModal() {
+        if (!modal) {
+          return;
+        }
+        modal.setAttribute('hidden', '');
+        modal.setAttribute('aria-hidden', 'true');
+        document.body.style.overflow = '';
+        if (form) {
+          form.reset();
+        }
+        clearAllInviteFieldErrors();
+        var ref = inviteFocusRestore;
+        inviteFocusRestore = null;
+        if (ref && typeof ref.focus === 'function') {
+          requestAnimationFrame(function () {
+            ref.focus();
+          });
+        }
+      }
+
+      if (!modal || !openBtn) {
+        return;
+      }
+
+      openBtn.addEventListener('click', function () {
+        inviteFocusRestore = document.activeElement;
+        var changeRoleEl = document.getElementById('change-role-modal');
+        if (changeRoleEl && !changeRoleEl.hasAttribute('hidden')) {
+          changeRoleEl.setAttribute('hidden', '');
+          changeRoleEl.setAttribute('aria-hidden', 'true');
+        }
+        var bulkRoleEl = document.getElementById('bulk-change-role-modal');
+        if (bulkRoleEl && !bulkRoleEl.hasAttribute('hidden')) {
+          bulkRoleEl.setAttribute('hidden', '');
+          bulkRoleEl.setAttribute('aria-hidden', 'true');
+        }
+        var pb = document.getElementById('people-actions-backdrop');
+        if (pb && !pb.hasAttribute('hidden')) {
+          pb.click();
+        }
+        document.dispatchEvent(new CustomEvent('ss-close-remove-member-modal'));
+        modal.removeAttribute('hidden');
+        modal.setAttribute('aria-hidden', 'false');
+        document.body.style.overflow = 'hidden';
+        requestAnimationFrame(function () {
+          var field = document.getElementById('invite-first-name');
+          if (field && typeof field.focus === 'function') {
+            field.focus();
+          }
+        });
+      });
+
+      modal.querySelectorAll('.js-invite-modal-close').forEach(function (btn) {
+        btn.addEventListener('click', function (e) {
+          e.preventDefault();
+          closeInviteModal();
+        });
+      });
+
+      function addPendingMemberRow(firstName, lastName, email, roleValue) {
+        var tbody = document.querySelector('.ss-people-table tbody');
+        if (!tbody) {
+          return;
+        }
+        var parts = [firstName, lastName].map(function (s) {
+          return s && String(s).trim() ? String(s).trim() : '';
+        }).filter(Boolean);
+        var displayName = parts.join(' ');
+        if (!displayName) {
+          var at = email.indexOf('@');
+          displayName = at > 0 ? email.slice(0, at) : email;
+        }
+        var isAdmin = roleValue === 'admin';
+        var roleLabel = isAdmin ? 'Admin' : 'Member';
+        var roleClass = isAdmin ? 'ss-role-chip ss-role-chip--admin' : 'ss-role-chip ss-role-chip--member';
+
+        var tr = document.createElement('tr');
+        tr.className = 'ss-people-row ss-people-row--pending';
+        tr.setAttribute('data-pending-invite', 'true');
+
+        var tdSelect = document.createElement('td');
+        tdSelect.className = 'ss-people-cell-select';
+        var selectLabel = document.createElement('label');
+        selectLabel.className = 'ss-checkbox';
+        var cb = document.createElement('input');
+        cb.type = 'checkbox';
+        cb.className = 'ss-checkbox__input js-people-row-check';
+        cb.setAttribute('disabled', '');
+        cb.setAttribute('aria-label', 'Select ' + displayName);
+        var box = document.createElement('span');
+        box.className = 'ss-checkbox__box';
+        box.setAttribute('aria-hidden', 'true');
+        var svgNS = 'http://www.w3.org/2000/svg';
+        var svg = document.createElementNS(svgNS, 'svg');
+        svg.setAttribute('class', 'ss-checkbox__check');
+        svg.setAttribute('width', '10');
+        svg.setAttribute('height', '8');
+        svg.setAttribute('viewBox', '0 0 10 8');
+        svg.setAttribute('fill', 'none');
+        svg.setAttribute('aria-hidden', 'true');
+        var path = document.createElementNS(svgNS, 'path');
+        path.setAttribute('d', 'M1 4l2.5 2.5L9 1');
+        path.setAttribute('stroke', 'currentColor');
+        path.setAttribute('stroke-width', '1.5');
+        path.setAttribute('stroke-linecap', 'round');
+        path.setAttribute('stroke-linejoin', 'round');
+        svg.appendChild(path);
+        box.appendChild(svg);
+        selectLabel.appendChild(cb);
+        selectLabel.appendChild(box);
+        tdSelect.appendChild(selectLabel);
+
+        var tdName = document.createElement('td');
+        tdName.className = 'ss-people-cell-name';
+        var nameEl = document.createElement('div');
+        nameEl.className = 'ss-people-name';
+        nameEl.textContent = displayName;
+        var emailDiv = document.createElement('div');
+        emailDiv.className = 'ss-people-email';
+        emailDiv.textContent = email;
+        tdName.appendChild(nameEl);
+        tdName.appendChild(emailDiv);
+
+        var tdRole = document.createElement('td');
+        var chip = document.createElement('span');
+        chip.className = roleClass;
+        chip.textContent = roleLabel;
+        tdRole.appendChild(chip);
+
+        var tdLogin = document.createElement('td');
+        tdLogin.className = 'ss-people-last-login';
+        tdLogin.textContent = 'Invitation pending';
+        tdLogin.setAttribute('title', 'They have not accepted the invite yet');
+
+        var tdActions = document.createElement('td');
+        tdActions.className = 'ss-people-actions ss-people-actions--empty';
+        var sr = document.createElement('span');
+        sr.className = 'ss-visually-hidden';
+        sr.textContent = 'Actions unavailable — invitation pending';
+        tdActions.appendChild(sr);
+
+        tr.appendChild(tdSelect);
+        tr.appendChild(tdName);
+        tr.appendChild(tdRole);
+        tr.appendChild(tdLogin);
+        tr.appendChild(tdActions);
+
+        tbody.insertBefore(tr, tbody.firstChild);
+        document.dispatchEvent(new CustomEvent('ss-people-rows-changed'));
+      }
+
+      if (form) {
+        ['invite-first-name', 'invite-last-name', 'invite-email'].forEach(function (fid) {
+          var el = document.getElementById(fid);
+          if (el) {
+            el.addEventListener('input', function () {
+              clearInviteInputError(fid);
+            });
+          }
+        });
+        var roleSelect = document.getElementById('invite-role');
+        if (roleSelect) {
+          roleSelect.addEventListener('change', function () {
+            clearInviteInputError('invite-role');
+          });
+        }
+
+        form.addEventListener('submit', function (e) {
+          e.preventDefault();
+          if (!validateInviteForm()) {
+            return;
+          }
+          var emailEl = document.getElementById('invite-email');
+          var email = emailEl && emailEl.value ? emailEl.value.trim() : '';
+          var fnEl = document.getElementById('invite-first-name');
+          var lnEl = document.getElementById('invite-last-name');
+          var roleEl = document.getElementById('invite-role');
+          var firstName = fnEl && fnEl.value ? fnEl.value.trim() : '';
+          var lastName = lnEl && lnEl.value ? lnEl.value.trim() : '';
+          var roleValue = roleEl && roleEl.value ? roleEl.value : '';
+          addPendingMemberRow(firstName, lastName, email, roleValue);
+          closeInviteModal();
+          showInviteSuccessToast(email);
+        });
+      }
+
+      window.addEventListener('pagehide', hideInviteToast);
+
+      document.addEventListener('keydown', function (e) {
+        if (e.key !== 'Escape') {
+          return;
+        }
+        var bulkRoleModal = document.getElementById('bulk-change-role-modal');
+        if (bulkRoleModal && !bulkRoleModal.hasAttribute('hidden')) {
+          return;
+        }
+        var changeRoleModal = document.getElementById('change-role-modal');
+        if (changeRoleModal && !changeRoleModal.hasAttribute('hidden')) {
+          return;
+        }
+        var removeMemberModal = document.getElementById('remove-member-modal');
+        if (removeMemberModal && !removeMemberModal.hasAttribute('hidden')) {
+          return;
+        }
+        if (modal.hasAttribute('hidden')) {
+          return;
+        }
+        closeInviteModal();
+      });
+    })();
+
+    (function () {
+      var modal = document.getElementById('change-role-modal');
+      var panel = modal && modal.querySelector('.js-change-role-panel');
+      var nameEl = modal && modal.querySelector('.js-change-role-name');
+      var currentLabel = modal && modal.querySelector('.js-change-role-current-label');
+      var altLabel = modal && modal.querySelector('.js-change-role-alt-label');
+      var optionBtn = modal && modal.querySelector('.js-change-role-option');
+      var currentCard = modal && modal.querySelector('[data-change-role-card="current"]');
+      var continueBtn = modal && modal.querySelector('.js-change-role-continue');
+      var toastEl = document.getElementById('role-change-success-toast');
+      var toastMsg = toastEl && toastEl.querySelector('.js-role-change-toast-message');
+      var focusRestore = null;
+      var toastTimer = null;
+      var contextRow = null;
+      var currentRole = 'member';
+      var alternateRole = 'admin';
+      var selectedRole = 'member';
+
+      if (!modal || !optionBtn || !continueBtn || !currentCard || !currentLabel || !altLabel || !nameEl || !panel) {
+        return;
+      }
+
+      function hideRoleToast() {
+        if (toastTimer) {
+          clearTimeout(toastTimer);
+          toastTimer = null;
+        }
+        if (toastEl) {
+          toastEl.setAttribute('hidden', '');
+          toastEl.setAttribute('aria-hidden', 'true');
+        }
+      }
+
+      document.addEventListener('ss-hide-role-success-toast', hideRoleToast);
+
+      function showRoleToast(displayRole) {
+        if (!toastEl || !toastMsg) {
+          return;
+        }
+        var label = displayRole === 'admin' ? 'Admin' : 'Member';
+        toastMsg.textContent = '1 User updated to ' + label + '.';
+        toastEl.removeAttribute('hidden');
+        toastEl.setAttribute('aria-hidden', 'false');
+        if (toastTimer) {
+          clearTimeout(toastTimer);
+        }
+        toastTimer = setTimeout(function () {
+          hideRoleToast();
+        }, 5000);
+      }
+
+      function syncCards() {
+        var onCurrent = selectedRole === currentRole;
+        continueBtn.disabled = onCurrent;
+        optionBtn.setAttribute('aria-pressed', (!onCurrent).toString());
+        optionBtn.classList.toggle('ss-change-role-card--selected', !onCurrent);
+        currentCard.classList.toggle('ss-change-role-card--active', onCurrent);
+      }
+
+      function closeChangeRoleModal() {
+        modal.setAttribute('hidden', '');
+        modal.setAttribute('aria-hidden', 'true');
+        document.body.style.overflow = '';
+        var ref = focusRestore;
+        focusRestore = null;
+        contextRow = null;
+        if (ref && typeof ref.focus === 'function') {
+          requestAnimationFrame(function () {
+            ref.focus();
+          });
+        }
+      }
+
+      function openChangeRoleModal(row) {
+        document.dispatchEvent(new CustomEvent('ss-close-remove-member-modal'));
+        contextRow = row;
+        var chip = row.querySelector('.ss-role-chip');
+        var nm = row.querySelector('.ss-people-name');
+        if (!chip || !nm) {
+          return;
+        }
+        currentRole = chip.classList.contains('ss-role-chip--admin') ? 'admin' : 'member';
+        alternateRole = currentRole === 'admin' ? 'member' : 'admin';
+        selectedRole = currentRole;
+        nameEl.textContent = nm.textContent.trim();
+        currentLabel.textContent = currentRole === 'admin' ? 'Admin' : 'Member';
+        altLabel.textContent = alternateRole === 'member' ? 'Make Member' : 'Make Admin';
+        optionBtn.dataset.targetRole = alternateRole;
+        syncCards();
+        focusRestore = document.activeElement;
+        modal.removeAttribute('hidden');
+        modal.setAttribute('aria-hidden', 'false');
+        document.body.style.overflow = 'hidden';
+        requestAnimationFrame(function () {
+          if (panel && typeof panel.focus === 'function') {
+            panel.focus();
+          }
+        });
+      }
+
+      document.addEventListener('ss-open-change-role', function (e) {
+        var row = e.detail && e.detail.row;
+        if (row) {
+          openChangeRoleModal(row);
+        }
+      });
+
+      optionBtn.addEventListener('click', function () {
+        selectedRole = alternateRole;
+        syncCards();
+      });
+
+      continueBtn.addEventListener('click', function () {
+        if (continueBtn.disabled || !contextRow) {
+          return;
+        }
+        var chip = contextRow.querySelector('.ss-role-chip');
+        if (!chip) {
+          return;
+        }
+        chip.textContent = alternateRole === 'admin' ? 'Admin' : 'Member';
+        chip.classList.remove('ss-role-chip--admin', 'ss-role-chip--member');
+        chip.classList.add(alternateRole === 'admin' ? 'ss-role-chip--admin' : 'ss-role-chip--member');
+        showRoleToast(alternateRole);
+        closeChangeRoleModal();
+      });
+
+      modal.querySelectorAll('.js-change-role-close').forEach(function (btn) {
+        btn.addEventListener('click', function (e) {
+          e.preventDefault();
+          closeChangeRoleModal();
+        });
+      });
+
+      document.addEventListener('keydown', function (e) {
+        if (e.key !== 'Escape') {
+          return;
+        }
+        var bulkRoleModal = document.getElementById('bulk-change-role-modal');
+        if (bulkRoleModal && !bulkRoleModal.hasAttribute('hidden')) {
+          return;
+        }
+        var removeMemberModal = document.getElementById('remove-member-modal');
+        if (removeMemberModal && !removeMemberModal.hasAttribute('hidden')) {
+          return;
+        }
+        if (modal.hasAttribute('hidden')) {
+          return;
+        }
+        e.preventDefault();
+        closeChangeRoleModal();
+      }, true);
+
+      window.addEventListener('pagehide', hideRoleToast);
+    })();
+
+    (function () {
+      var modal = document.getElementById('bulk-change-role-modal');
+      var panel = modal && modal.querySelector('.js-bulk-change-role-panel');
+      var countEl = modal && modal.querySelector('.js-bulk-change-role-count');
+      var choices = modal ? modal.querySelectorAll('.js-bulk-change-role-choice') : [];
+      var continueBtn = modal && modal.querySelector('.js-bulk-change-role-continue');
+      var hint = document.getElementById('bulk-change-role-member-hint');
+      var memberBtn = modal && modal.querySelector('.js-bulk-change-role-choice[data-bulk-role="member"]');
+      var toastEl = document.getElementById('role-change-success-toast');
+      var toastMsg = toastEl && toastEl.querySelector('.js-role-change-toast-message');
+      var tbl = document.querySelector('.ss-people-table');
+      var focusRestore = null;
+      var selectedRows = [];
+      var chosenRole = null;
+
+      if (!modal || !panel || !continueBtn || !countEl || !choices.length || !tbl || !hint || !memberBtn) {
+        return;
+      }
+
+      function soleAdminRow() {
+        var admins = [];
+        Array.prototype.forEach.call(tbl.querySelectorAll('tbody tr'), function (tr) {
+          if (tr.querySelector('.ss-role-chip--admin')) {
+            admins.push(tr);
+          }
+        });
+        return admins.length === 1 ? admins[0] : null;
+      }
+
+      function soleAdminInSelection(rows) {
+        var sole = soleAdminRow();
+        if (!sole) {
+          return false;
+        }
+        return rows.some(function (r) {
+          return r === sole;
+        });
+      }
+
+      function syncChoiceUi() {
+        Array.prototype.forEach.call(choices, function (btn) {
+          var role = btn.getAttribute('data-bulk-role');
+          var on = chosenRole === role;
+          btn.classList.toggle('ss-change-role-card--selected', on);
+          btn.setAttribute('aria-pressed', on ? 'true' : 'false');
+        });
+        continueBtn.disabled = chosenRole === null;
+      }
+
+      function updateMemberGate(rows) {
+        var block = soleAdminInSelection(rows);
+        memberBtn.disabled = block;
+        memberBtn.classList.toggle('ss-change-role-card--blocked', block);
+        memberBtn.setAttribute('aria-disabled', block ? 'true' : 'false');
+        if (block) {
+          hint.removeAttribute('hidden');
+        } else {
+          hint.setAttribute('hidden', '');
+        }
+        if (chosenRole === 'member' && block) {
+          chosenRole = null;
+          syncChoiceUi();
+        }
+      }
+
+      function clearBulkSelectionUi() {
+        Array.prototype.forEach.call(tbl.querySelectorAll('.js-people-row-check'), function (cb) {
+          if (!cb.disabled) {
+            cb.checked = false;
+          }
+        });
+        var selectAllEl = document.querySelector('.js-people-select-all');
+        if (selectAllEl) {
+          selectAllEl.checked = false;
+          selectAllEl.indeterminate = false;
+        }
+        document.dispatchEvent(new CustomEvent('ss-sync-people-bulk-bar'));
+      }
+
+      function closeBulkChangeRoleModal() {
+        modal.setAttribute('hidden', '');
+        modal.setAttribute('aria-hidden', 'true');
+        document.body.style.overflow = '';
+        hint.setAttribute('hidden', '');
+        memberBtn.disabled = false;
+        memberBtn.classList.remove('ss-change-role-card--blocked');
+        memberBtn.setAttribute('aria-disabled', 'false');
+        chosenRole = null;
+        selectedRows = [];
+        Array.prototype.forEach.call(choices, function (btn) {
+          btn.classList.remove('ss-change-role-card--selected');
+          btn.setAttribute('aria-pressed', 'false');
+        });
+        continueBtn.disabled = true;
+        var ref = focusRestore;
+        focusRestore = null;
+        if (ref && typeof ref.focus === 'function') {
+          requestAnimationFrame(function () {
+            ref.focus();
+          });
+        }
+        document.dispatchEvent(new CustomEvent('ss-sync-people-bulk-bar'));
+      }
+
+      function openBulkChangeRoleModal(rows) {
+        document.dispatchEvent(new CustomEvent('ss-close-remove-member-modal'));
+        selectedRows = rows.slice();
+        chosenRole = null;
+        countEl.textContent = String(rows.length);
+        clearBulkSelectionUi();
+        updateMemberGate(selectedRows);
+        syncChoiceUi();
+        focusRestore = document.activeElement;
+        modal.removeAttribute('hidden');
+        modal.setAttribute('aria-hidden', 'false');
+        document.body.style.overflow = 'hidden';
+        requestAnimationFrame(function () {
+          if (panel && typeof panel.focus === 'function') {
+            panel.focus();
+          }
+        });
+      }
+
+      document.addEventListener('ss-open-bulk-change-role', function (e) {
+        var rows = e.detail && e.detail.rows;
+        if (rows && rows.length) {
+          openBulkChangeRoleModal(rows);
+        }
+      });
+
+      Array.prototype.forEach.call(choices, function (btn) {
+        btn.addEventListener('click', function () {
+          if (btn.disabled) {
+            return;
+          }
+          chosenRole = btn.getAttribute('data-bulk-role');
+          syncChoiceUi();
+        });
+      });
+
+      continueBtn.addEventListener('click', function () {
+        if (continueBtn.disabled || !chosenRole || selectedRows.length === 0) {
+          return;
+        }
+        document.dispatchEvent(new CustomEvent('ss-hide-role-success-toast'));
+        var n = selectedRows.length;
+        selectedRows.forEach(function (row) {
+          var chip = row.querySelector('.ss-role-chip');
+          if (!chip) {
+            return;
+          }
+          chip.textContent = chosenRole === 'admin' ? 'Admin' : 'Member';
+          chip.classList.remove('ss-role-chip--admin', 'ss-role-chip--member');
+          chip.classList.add(chosenRole === 'admin' ? 'ss-role-chip--admin' : 'ss-role-chip--member');
+        });
+        if (toastEl && toastMsg) {
+          var label = chosenRole === 'admin' ? 'Admin' : 'Member';
+          toastMsg.textContent = n === 1 ? '1 User updated to ' + label + '.' : n + ' users updated to ' + label + '.';
+          toastEl.removeAttribute('hidden');
+          toastEl.setAttribute('aria-hidden', 'false');
+          setTimeout(function () {
+            document.dispatchEvent(new CustomEvent('ss-hide-role-success-toast'));
+          }, 5000);
+        }
+        closeBulkChangeRoleModal();
+      });
+
+      modal.querySelectorAll('.js-bulk-change-role-close').forEach(function (btn) {
+        btn.addEventListener('click', function (e) {
+          e.preventDefault();
+          closeBulkChangeRoleModal();
+        });
+      });
+
+      document.addEventListener('keydown', function (e) {
+        if (e.key !== 'Escape') {
+          return;
+        }
+        var removeMemberModal = document.getElementById('remove-member-modal');
+        if (removeMemberModal && !removeMemberModal.hasAttribute('hidden')) {
+          return;
+        }
+        if (modal.hasAttribute('hidden')) {
+          return;
+        }
+        e.preventDefault();
+        closeBulkChangeRoleModal();
+      }, true);
+    })();
+
+    (function () {
+      var modal = document.getElementById('remove-member-modal');
+      if (!modal) {
+        return;
+      }
+      var panel = modal.querySelector('.js-remove-member-panel');
+      var leadEl = modal.querySelector('.js-remove-member-lead');
+      var ackLabelEl = modal.querySelector('.js-remove-member-ack-label');
+      var ackEl = modal.querySelector('.js-remove-member-ack');
+      var confirmBtn = modal.querySelector('.js-remove-member-confirm');
+      if (!panel || !leadEl || !ackLabelEl || !ackEl || !confirmBtn) {
+        return;
+      }
+      var focusRestore = null;
+      var rowsTarget = [];
+
+      function dismissSiblingModalsAndMenu() {
+        ['invite-member-modal', 'change-role-modal', 'bulk-change-role-modal'].forEach(function (id) {
+          var el = document.getElementById(id);
+          if (el && !el.hasAttribute('hidden')) {
+            el.setAttribute('hidden', '');
+            el.setAttribute('aria-hidden', 'true');
+          }
+        });
+        var pb = document.getElementById('people-actions-backdrop');
+        if (pb && !pb.hasAttribute('hidden')) {
+          pb.click();
+        }
+      }
+
+      function closeRemoveModal() {
+        if (!modal.hasAttribute('hidden')) {
+          document.body.style.overflow = '';
+        }
+        modal.setAttribute('hidden', '');
+        modal.setAttribute('aria-hidden', 'true');
+        ackEl.checked = false;
+        confirmBtn.disabled = true;
+        rowsTarget = [];
+        var ref = focusRestore;
+        focusRestore = null;
+        if (ref && typeof ref.focus === 'function') {
+          requestAnimationFrame(function () {
+            ref.focus();
+          });
+        }
+      }
+
+      function openRemoveModal(rows) {
+        var list = (rows || []).filter(Boolean);
+        if (!list.length) {
+          return;
+        }
+        dismissSiblingModalsAndMenu();
+        rowsTarget = list.slice();
+        var n = rowsTarget.length;
+        leadEl.textContent =
+          n === 1
+            ? 'This will revoke Octopus access for 1 user.'
+            : 'This will revoke Octopus access for ' + n + ' users.';
+        ackLabelEl.textContent =
+          n === 1
+            ? 'I understand that removing the member will revoke their access'
+            : 'I understand that removing these members will revoke their access';
+        ackEl.checked = false;
+        confirmBtn.disabled = true;
+        focusRestore = document.activeElement;
+        modal.removeAttribute('hidden');
+        modal.setAttribute('aria-hidden', 'false');
+        document.body.style.overflow = 'hidden';
+        requestAnimationFrame(function () {
+          if (panel && typeof panel.focus === 'function') {
+            panel.focus();
+          }
+        });
+      }
+
+      ackEl.addEventListener('change', function () {
+        confirmBtn.disabled = !ackEl.checked;
+      });
+
+      modal.querySelectorAll('.js-remove-member-close').forEach(function (btn) {
+        btn.addEventListener('click', function (e) {
+          e.preventDefault();
+          closeRemoveModal();
+        });
+      });
+
+      confirmBtn.addEventListener('click', function () {
+        if (confirmBtn.disabled || rowsTarget.length === 0) {
+          return;
+        }
+        document.dispatchEvent(new CustomEvent('ss-hide-role-success-toast'));
+        var n = rowsTarget.length;
+        rowsTarget.forEach(function (row) {
+          if (row && row.parentNode) {
+            row.parentNode.removeChild(row);
+          }
+        });
+        var toastEl = document.getElementById('role-change-success-toast');
+        var toastMsg = toastEl && toastEl.querySelector('.js-role-change-toast-message');
+        if (toastEl && toastMsg) {
+          toastMsg.textContent = n === 1 ? 'Member removed.' : n + ' members removed.';
+          toastEl.removeAttribute('hidden');
+          toastEl.setAttribute('aria-hidden', 'false');
+          setTimeout(function () {
+            document.dispatchEvent(new CustomEvent('ss-hide-role-success-toast'));
+          }, 5000);
+        }
+        closeRemoveModal();
+        document.dispatchEvent(new CustomEvent('ss-sync-people-bulk-bar'));
+        document.dispatchEvent(new CustomEvent('ss-people-rows-changed'));
+      });
+
+      document.addEventListener('ss-open-remove-member', function (e) {
+        var rows = e.detail && e.detail.rows;
+        if (rows && rows.length) {
+          openRemoveModal(rows);
+        }
+      });
+
+      document.addEventListener('ss-close-remove-member-modal', closeRemoveModal);
+
+      document.addEventListener('keydown', function (e) {
+        if (e.key !== 'Escape') {
+          return;
+        }
+        if (modal.hasAttribute('hidden')) {
+          return;
+        }
+        e.preventDefault();
+        closeRemoveModal();
+      }, true);
+    })();
+  </script>
+  <script src="js/sidenav.js"></script>
+</body>
+</html>
