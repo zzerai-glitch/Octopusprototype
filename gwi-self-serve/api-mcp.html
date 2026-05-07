@@ -75,7 +75,7 @@
         <div class="ss-appbar__inner">
           <h1 class="ss-appbar__title">Settings</h1>
           <div class="ss-appbar__account">
-            <span>Netflix Media</span>
+            <span>Acme Global</span>
             <span class="ss-appbar__avatar-lg" aria-hidden="true">JS</span>
           </div>
         </div>
@@ -99,17 +99,316 @@
       <section class="ss-page-head" aria-labelledby="page-title">
         <div class="ss-page-head__divider">
           <h2 id="page-title" class="ss-page-head__title">API &amp; MCP</h2>
-          <p class="ss-page-head__sub">Connect programmatic access and Model Context Protocol integrations for GWI Octopus.</p>
+          <p class="ss-page-head__sub">Overview of API and MCP usage across your organisation</p>
         </div>
       </section>
 
       <div class="ss-content">
-        <p class="ss-placeholder">
-          This area will manage API keys, tokens, and MCP server configuration. Switch to Overview for account details or People for access management.
-        </p>
+        <div class="ss-api-page">
+          <div class="ss-api-summary" aria-label="Usage summary">
+            <article class="ss-api-card">
+              <p class="ss-api-card__label">Total calls</p>
+              <p class="ss-api-card__value">1,612,143</p>
+              <p class="ss-api-card__hint">Octopus API &amp; MCP combined</p>
+            </article>
+            <article class="ss-api-card">
+              <p class="ss-api-card__label">API calls</p>
+              <p class="ss-api-card__value">1,284,143</p>
+              <p class="ss-api-card__hint">Octopus API calls</p>
+            </article>
+            <article class="ss-api-card ss-api-card--mcp">
+              <p class="ss-api-card__label">MCP Calls</p>
+              <p class="ss-api-card__value">1,284,143</p>
+              <p class="ss-api-card__hint">Octopus MCP Connector</p>
+            </article>
+          </div>
+
+          <section class="ss-api-chart-card" aria-labelledby="usage-chart-title" aria-describedby="usage-chart-period-sub">
+            <div class="ss-api-chart-head">
+              <div class="ss-api-chart-head__lead">
+                <h3 id="usage-chart-title" class="ss-api-chart-title">API &amp; MCP usage over time</h3>
+                <p id="usage-chart-period-sub" class="ss-api-chart-period-sub" aria-live="polite"></p>
+              </div>
+              <div class="ss-api-period" role="group" aria-label="Time period" id="usage-chart-period">
+                <button type="button" class="ss-api-period__btn" data-usage-period="daily" aria-pressed="false">Daily</button>
+                <button type="button" class="ss-api-period__btn ss-api-period__btn--active" data-usage-period="weekly" aria-pressed="true">Weekly</button>
+                <button type="button" class="ss-api-period__btn" data-usage-period="monthly" aria-pressed="false">Monthly</button>
+              </div>
+            </div>
+            <div class="ss-api-chart-legend" aria-hidden="true">
+              <span class="ss-api-chart-legend__item"><span class="ss-api-chart-legend__swatch ss-api-chart-legend__swatch--api"></span> API</span>
+              <span class="ss-api-chart-legend__item"><span class="ss-api-chart-legend__swatch ss-api-chart-legend__swatch--mcp"></span> MCP</span>
+            </div>
+            <div class="ss-api-chart-track" id="usage-chart-track" aria-live="polite"></div>
+          </section>
+
+          <section class="ss-api-connectors" aria-labelledby="connectors-title">
+            <div class="ss-api-connectors__intro">
+              <h3 id="connectors-title" class="ss-api-connectors__title">MCP Connector Usage</h3>
+              <p class="ss-api-connectors__sub">Overview of your connector usage across your organisation</p>
+            </div>
+            <div class="ss-api-hbar-card">
+              <div class="ss-api-hbar-row">
+                <div class="ss-api-hbar-label">ChatGPT</div>
+                <div class="ss-api-hbar-track">
+                  <div class="ss-api-hbar-bar">
+                    <div class="ss-api-hbar-fill" style="width:60%"></div>
+                  </div>
+                </div>
+                <div class="ss-api-hbar-value">
+                  <span class="ss-api-hbar-value__num">212,494</span>
+                  <span class="ss-api-hbar-value__pct">30%</span>
+                </div>
+              </div>
+              <div class="ss-api-hbar-row">
+                <div class="ss-api-hbar-label">MS Copilot</div>
+                <div class="ss-api-hbar-track">
+                  <div class="ss-api-hbar-bar">
+                    <div class="ss-api-hbar-fill" style="width:100%"></div>
+                  </div>
+                </div>
+                <div class="ss-api-hbar-value">
+                  <span class="ss-api-hbar-value__num">354,156</span>
+                  <span class="ss-api-hbar-value__pct">50%</span>
+                </div>
+              </div>
+              <div class="ss-api-hbar-row">
+                <div class="ss-api-hbar-label">Claude</div>
+                <div class="ss-api-hbar-track">
+                  <div class="ss-api-hbar-bar">
+                    <div class="ss-api-hbar-fill" style="width:40%"></div>
+                  </div>
+                </div>
+                <div class="ss-api-hbar-value">
+                  <span class="ss-api-hbar-value__num">141,662</span>
+                  <span class="ss-api-hbar-value__pct">20%</span>
+                </div>
+              </div>
+            </div>
+          </section>
+
+          <section class="ss-api-users" aria-labelledby="api-users-title">
+            <div class="ss-api-users__toolbar">
+              <h3 id="api-users-title" class="ss-api-users__title">Usage by user</h3>
+              <div class="ss-search-bar" role="search">
+                <svg class="ss-search-bar__icon" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg" aria-hidden="true">
+                  <circle cx="11" cy="11" r="8" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+                  <path d="m21 21-4.3-4.3" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+                </svg>
+                <label class="ss-visually-hidden" for="api-users-search">Search users</label>
+                <input id="api-users-search" class="ss-search-bar__input" type="search" placeholder="Search by name or email..." autocomplete="off">
+              </div>
+            </div>
+            <div class="ss-api-users-table-shell">
+              <table class="ss-api-users-table">
+                <thead>
+                  <tr>
+                    <th scope="col">Name</th>
+                    <th scope="col">API Calls</th>
+                    <th scope="col">MCP Calls</th>
+                    <th scope="col">Total calls</th>
+                  </tr>
+                </thead>
+                <tbody id="api-users-tbody">
+                  <tr data-search="john doe john.doe@netflix.com">
+                    <td>
+                      <div class="ss-api-user-name">John Doe</div>
+                      <div class="ss-api-user-email">john.doe@netflix.com</div>
+                    </td>
+                    <td>312,044</td>
+                    <td>312,044</td>
+                    <td><strong>312,044</strong></td>
+                  </tr>
+                  <tr data-search="jane smith jane.smith@acmeglobal.com">
+                    <td>
+                      <div class="ss-api-user-name">Jane Smith</div>
+                      <div class="ss-api-user-email">jane.smith@acmeglobal.com</div>
+                    </td>
+                    <td>312,044</td>
+                    <td>312,044</td>
+                    <td><strong>312,044</strong></td>
+                  </tr>
+                  <tr data-search="sam lee sam.lee@acmeglobal.com">
+                    <td>
+                      <div class="ss-api-user-name">Sam Lee</div>
+                      <div class="ss-api-user-email">sam.lee@acmeglobal.com</div>
+                    </td>
+                    <td>312,044</td>
+                    <td>312,044</td>
+                    <td><strong>312,044</strong></td>
+                  </tr>
+                  <tr data-search="alex rivera alex@partner.co">
+                    <td>
+                      <div class="ss-api-user-name">Alex Rivera</div>
+                      <div class="ss-api-user-email">alex@partner.co</div>
+                    </td>
+                    <td>312,044</td>
+                    <td>312,044</td>
+                    <td><strong>312,044</strong></td>
+                  </tr>
+                </tbody>
+              </table>
+            </div>
+          </section>
+        </div>
       </div>
     </div>
   </div>
   <script src="js/sidenav.js"></script>
+
+  <script>
+(function () {
+  var track = document.getElementById('usage-chart-track');
+  var periodEl = document.getElementById('usage-chart-period');
+  var periodSubEl = document.getElementById('usage-chart-period-sub');
+  if (!track || !periodEl) return;
+
+  function fmt(n) {
+    return n.toLocaleString('en-GB');
+  }
+
+  function escAttr(str) {
+    return String(str).replace(/&/g, '&amp;').replace(/"/g, '&quot;').replace(/</g, '&lt;');
+  }
+
+  function last7WeekdayLabels() {
+    var labels = [];
+    var d = new Date();
+    for (var i = 6; i >= 0; i--) {
+      var x = new Date(d.getFullYear(), d.getMonth(), d.getDate() - i);
+      labels.push(x.toLocaleDateString('en-GB', { weekday: 'short' }));
+    }
+    return labels;
+  }
+
+  function last6MonthLabels() {
+    var labels = [];
+    var d = new Date();
+    for (var i = 5; i >= 0; i--) {
+      var x = new Date(d.getFullYear(), d.getMonth() - i, 1);
+      labels.push(x.toLocaleDateString('en-GB', { month: 'short' }));
+    }
+    return labels;
+  }
+
+  function buildDailyRows() {
+    var labels = last7WeekdayLabels();
+    var apis = [118200, 142050, 135800, 98400, 167300, 189400, 124600];
+    var mcps = [45200, 38900, 61200, 52300, 98100, 76400, 55800];
+    return labels.map(function (lab, i) {
+      return { label: lab, api: apis[i], mcp: mcps[i] };
+    });
+  }
+
+  function buildMonthlyRows() {
+    var labels = last6MonthLabels();
+    var apis = [980000, 1120000, 1050000, 1210000, 1180000, 1240000];
+    var mcps = [420000, 465000, 438000, 502000, 489000, 512000];
+    return labels.map(function (lab, i) {
+      return { label: lab, api: apis[i], mcp: mcps[i] };
+    });
+  }
+
+  var DATA = {
+    daily: buildDailyRows(),
+    weekly: [
+      { label: 'Week 1', api: 282400, mcp: 70600 },
+      { label: 'Week 2', api: 353000, mcp: 235300 },
+      { label: 'Week 3', api: 329500, mcp: 376800 },
+      { label: 'Week 4', api: 188400, mcp: 259000 },
+      { label: 'Week 5', api: 117600, mcp: 376800 }
+    ],
+    monthly: buildMonthlyRows()
+  };
+
+  function periodHelp(period) {
+    if (period === 'daily') return 'Last 7 days (daily total)';
+    if (period === 'weekly') return 'Last 5 weeks (weekly total)';
+    return 'Last 6 months (monthly total)';
+  }
+
+  function fmtRangeDate(d) {
+    return d.toLocaleDateString('en-GB', { day: 'numeric', month: 'short', year: 'numeric' });
+  }
+
+  function periodDateRangeLabel(period) {
+    var now = new Date();
+    var end = new Date(now.getFullYear(), now.getMonth(), now.getDate());
+    var start;
+    if (period === 'daily') {
+      start = new Date(end.getFullYear(), end.getMonth(), end.getDate() - 6);
+    } else if (period === 'weekly') {
+      start = new Date(end.getFullYear(), end.getMonth(), end.getDate() - (5 * 7 - 1));
+    } else {
+      start = new Date(end.getFullYear(), end.getMonth() - 5, 1);
+    }
+    return fmtRangeDate(start) + ' – ' + fmtRangeDate(end);
+  }
+
+  function render(period) {
+    var rows = DATA[period];
+    var maxVal = 1;
+    rows.forEach(function (r) {
+      maxVal = Math.max(maxVal, r.api, r.mcp);
+    });
+
+    var html = '';
+    rows.forEach(function (row) {
+      var apiPct = Math.round((row.api / maxVal) * 1000) / 10;
+      var mcpPct = Math.round((row.mcp / maxVal) * 1000) / 10;
+      var apiLabel = 'API usage - ' + periodHelp(period) + ': ' + row.label + ', ' + fmt(row.api) + ' calls';
+      var mcpLabel = 'MCP usage - ' + periodHelp(period) + ': ' + row.label + ', ' + fmt(row.mcp) + ' calls';
+      html +=
+        '<div class="ss-api-chart-col">' +
+          '<div class="ss-api-chart-bar-row">' +
+            '<div class="ss-api-chart-bar-hit" tabindex="0" aria-label="' + escAttr(apiLabel) + '">' +
+              '<div class="ss-api-chart-bar ss-api-chart-bar--api" style="height:' + apiPct + '%"></div>' +
+              '<span class="ss-api-chart-tooltip" role="tooltip">API: ' + fmt(row.api) + ' calls</span>' +
+            '</div>' +
+            '<div class="ss-api-chart-bar-hit" tabindex="0" aria-label="' + escAttr(mcpLabel) + '">' +
+              '<div class="ss-api-chart-bar ss-api-chart-bar--mcp" style="height:' + mcpPct + '%"></div>' +
+              '<span class="ss-api-chart-tooltip" role="tooltip">MCP: ' + fmt(row.mcp) + ' calls</span>' +
+            '</div>' +
+          '</div>' +
+          '<span class="ss-api-chart-xlabel" title="' + escAttr(periodHelp(period)) + '">' + escAttr(row.label) + '</span>' +
+        '</div>';
+    });
+
+    track.innerHTML = html;
+    if (periodSubEl) periodSubEl.textContent = periodDateRangeLabel(period);
+  }
+
+  periodEl.querySelectorAll('[data-usage-period]').forEach(function (btn) {
+    btn.addEventListener('click', function () {
+      var p = btn.getAttribute('data-usage-period');
+      periodEl.querySelectorAll('[data-usage-period]').forEach(function (b) {
+        var on = b === btn;
+        b.classList.toggle('ss-api-period__btn--active', on);
+        b.setAttribute('aria-pressed', on ? 'true' : 'false');
+      });
+      render(p);
+    });
+  });
+
+  render('weekly');
+})();
+  </script>
+
+  <script>
+(function () {
+  var input = document.getElementById('api-users-search');
+  var tbody = document.getElementById('api-users-tbody');
+  if (!input || !tbody) return;
+  function filterRows() {
+    var q = input.value.trim().toLowerCase();
+    tbody.querySelectorAll('tr').forEach(function (tr) {
+      var hay = (tr.getAttribute('data-search') || '').toLowerCase();
+      tr.classList.toggle('ss-api-user-row--filtered-out', q !== '' && hay.indexOf(q) === -1);
+    });
+  }
+  input.addEventListener('input', filterRows);
+  input.addEventListener('search', filterRows);
+})();
+  </script>
 </body>
 </html>
