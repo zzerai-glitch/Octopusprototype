@@ -1,0 +1,5 @@
+{
+  "name": "octopus-prototype",
+  "private": true,
+  "description": "Static GWI self-serve HTML prototype for Vercel"
+}
