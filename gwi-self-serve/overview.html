@@ -4,7 +4,7 @@
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Settings — Overview | GWI Octopus</title>
-  <link rel="stylesheet" href="css/self-serve.css">
+  <link rel="stylesheet" href="css/self-serve.css?v=polish-9">
 </head>
 <body>
   <div class="ss-layout">
@@ -75,7 +75,7 @@
         <div class="ss-appbar__inner">
           <h1 class="ss-appbar__title">Settings</h1>
           <div class="ss-appbar__account">
-            <span>Netflix Media</span>
+            <span>Acme Global</span>
             <span class="ss-appbar__avatar-lg" aria-hidden="true">JS</span>
           </div>
         </div>
@@ -96,51 +96,121 @@
         </a>
       </nav>
 
-      <section class="ss-page-head" aria-labelledby="page-title">
-        <div class="ss-page-head__divider">
-          <h2 id="page-title" class="ss-page-head__title">Overview</h2>
-          <p class="ss-page-head__sub">Overview of your account details for GWI Octopus</p>
-        </div>
-      </section>
-
-      <div class="ss-content">
-        <section class="ss-section" aria-labelledby="personal-heading">
-          <h3 id="personal-heading" class="ss-section__label">Personal Information</h3>
-          <dl class="ss-kv-stack">
-            <div class="ss-kv-row"><dt>First name</dt><dd>David</dd></div>
-            <div class="ss-kv-row"><dt>Last name</dt><dd>Jones</dd></div>
-            <div class="ss-kv-row"><dt>Role</dt><dd>Admin</dd></div>
-            <div class="ss-kv-row"><dt>City name</dt><dd>London</dd></div>
-            <div class="ss-kv-row"><dt>Country</dt><dd>United Kingdom</dd></div>
-          </dl>
-        </section>
-
-        <section class="ss-section" aria-labelledby="account-heading">
-          <h3 id="account-heading" class="ss-section__label">Account information</h3>
-          <dl class="ss-kv-stack">
-            <div class="ss-kv-row"><dt>Organisation</dt><dd>Netflix</dd></div>
-            <div class="ss-kv-row"><dt>Account Access</dt><dd>Octopus Platform</dd></div>
-          </dl>
-        </section>
-
-        <section class="ss-section" aria-labelledby="dataset-heading">
-          <h3 id="dataset-heading" class="ss-section__label">Octopus Dataset Access</h3>
-          <div class="ss-kv-stack">
-            <div class="ss-chip-row">
-              <span class="ss-chip ss-chip--pink">GWI Core</span>
-              <span class="ss-chip ss-chip--pink">GWI Kids</span>
-              <span class="ss-chip ss-chip--pink">Netflix GenZ Custom study</span>
-            </div>
-            <div class="ss-chip-row">
-              <span class="ss-chip ss-chip--purple">Global</span>
-              <span class="ss-chip ss-chip--purple">France</span>
+      <div class="ss-overview">
+        <section class="ss-overview__intro" aria-labelledby="page-title">
+          <h2 id="page-title" class="ss-overview__title">Overview</h2>
+          <p class="ss-overview__lead">View your personal account preferences and settings.</p>
+          <div class="ss-overview__org">
+            <p class="ss-overview__org-label">Organisation</p>
+            <div class="ss-overview__org-row">
+              <span class="ss-overview__org-name">ACME Global</span>
+              <span class="ss-role-chip ss-role-chip--admin-light">Admin</span>
             </div>
           </div>
         </section>
 
-        <p class="ss-footnote">
-          To change your email address or organisation or close your account, please contact <strong>customersuccess@gwi.com</strong>
-        </p>
+        <div class="ss-overview__panels">
+          <section class="ss-overview-card" aria-labelledby="profile-heading">
+            <h3 id="profile-heading" class="ss-overview-card__title">Profile information</h3>
+            <div class="ss-overview-fields ss-overview-fields--sections">
+              <div class="ss-overview-fields__row">
+                <div class="ss-overview-field">
+                  <div class="ss-overview-field__label">First name</div>
+                  <div class="ss-overview-field__value">John</div>
+                </div>
+                <div class="ss-overview-field">
+                  <div class="ss-overview-field__label">Last name</div>
+                  <div class="ss-overview-field__value">Doe</div>
+                </div>
+              </div>
+              <div class="ss-overview-fields__block">
+              <div class="ss-overview-fields__row">
+                <div class="ss-overview-field">
+                  <div class="ss-overview-field__label">City</div>
+                  <div class="ss-overview-field__value">London</div>
+                </div>
+                <div class="ss-overview-field">
+                  <div class="ss-overview-field__label">Country</div>
+                  <div class="ss-overview-field__value">United Kingdom</div>
+                </div>
+              </div>
+              </div>
+              <div class="ss-overview-fields__pro">
+              <div class="ss-overview-fields__row">
+                <div class="ss-overview-field">
+                  <div class="ss-overview-field__label">Occupation</div>
+                  <div class="ss-overview-field__value">Other</div>
+                </div>
+                <div class="ss-overview-field">
+                  <div class="ss-overview-field__label">Industry</div>
+                  <div class="ss-overview-field__value">Advertising</div>
+                </div>
+              </div>
+                <div class="ss-overview-field ss-overview-field--full">
+                  <div class="ss-overview-field__label">Job title</div>
+                  <div class="ss-overview-field__value">Advertising Executive</div>
+                </div>
+              </div>
+            </div>
+          </section>
+
+          <section class="ss-overview-card" aria-labelledby="security-heading">
+            <h3 id="security-heading" class="ss-overview-card__title">Security</h3>
+            <div class="ss-overview-fields">
+              <div class="ss-overview-field ss-overview-field--full">
+                <div class="ss-overview-field__label">Email address</div>
+                <div class="ss-overview-field__value">john.doe@acmeglobal.com</div>
+              </div>
+              <div class="ss-overview-hint" role="note">
+                <svg class="ss-overview-hint__icon" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg" aria-hidden="true">
+                  <circle cx="12" cy="12" r="10" stroke="currentColor" stroke-width="1.5"/>
+                  <path d="M12 16v.01M12 8v5" stroke="currentColor" stroke-width="1.75" stroke-linecap="round"/>
+                </svg>
+                <p class="ss-overview-hint__text">
+                  To change your email address or close your account please contact
+                  <a class="ss-link-accent" href="mailto:support@gwi.com">support@gwi.com</a>
+                </p>
+              </div>
+            </div>
+          </section>
+
+          <section class="ss-overview-card" aria-labelledby="dataset-heading">
+            <h3 id="dataset-heading" class="ss-overview-card__title">Personal dataset access</h3>
+            <div class="ss-overview-access">
+              <div class="ss-overview-access__col">
+                <p class="ss-overview-access__label">Data bundles</p>
+                <div class="ss-overview-access__tags">
+                  <span class="ss-chip ss-chip--bundle">GWI Core</span>
+                  <span class="ss-chip ss-chip--bundle">Zeitgeist</span>
+                  <span class="ss-chip ss-chip--bundle">GWI Gaming</span>
+                  <span class="ss-chip ss-chip--bundle">GWI Sports</span>
+                  <span class="ss-chip ss-chip--bundle">Insights Recontact 2022</span>
+                  <span class="ss-chip ss-chip--bundle">Insights Recontact 2022</span>
+                  <span class="ss-chip ss-chip--bundle">Insights Recontact 2022</span>
+                  <span class="ss-chip ss-chip--bundle">Insights Recontact 2022</span>
+                  <span class="ss-chip ss-chip--bundle">Insights Recontact 2022</span>
+                  <span class="ss-chip ss-chip--bundle">Insights Recontact 2022</span>
+                  <span class="ss-chip ss-chip--bundle">Insights Recontact 2022</span>
+                  <span class="ss-chip ss-chip--bundle">Insights Recontact 2022</span>
+                  <span class="ss-chip ss-chip--bundle">Insights Recontact 2022</span>
+                </div>
+              </div>
+              <div class="ss-overview-access__col">
+                <p class="ss-overview-access__label">Location bundles</p>
+                <div class="ss-overview-access__tags">
+                  <span class="ss-chip ss-chip--bundle">France</span>
+                  <span class="ss-chip ss-chip--bundle">United Kingdom</span>
+                  <span class="ss-chip ss-chip--bundle">USA</span>
+                </div>
+              </div>
+            </div>
+          </section>
+
+          <p class="ss-overview-footnote">
+            To make changes to your access or settings, please contact your organisation’s admin or
+            <a class="ss-link-accent" href="mailto:support@gwi.com">support@gwi.com</a>
+          </p>
+        </div>
       </div>
     </div>
   </div>
