@@ -1,0 +1,149 @@
+<aside class="ss-sidenav" id="ss-sidenav" aria-label="Main navigation">
+  <div class="ss-sidenav__main">
+    <div class="ss-sidenav__top">
+      <a href="overview.html" class="ss-logo" aria-label="GWI home">GWI<span class="ss-logo-dot">.</span></a>
+      <button type="button" class="ss-btn-icon ss-sidenav__toggle" aria-label="Collapse sidebar" aria-expanded="true" aria-controls="ss-sidenav">
+        <svg class="ss-icon-collapse" viewBox="0 0 16 16" fill="none" xmlns="http://www.w3.org/2000/svg" aria-hidden="true">
+          <rect x="2.5" y="2.5" width="11" height="11" rx="1" stroke="currentColor" stroke-width="1.2"/>
+          <path d="M5.5 2.5v11" stroke="currentColor" stroke-width="1.2"/>
+        </svg>
+      </button>
+    </div>
+
+    <div class="ss-sidenav__scroll">
+      <nav class="ss-sidenav__primary" aria-label="Chat actions">
+        <a href="home.html" class="ss-nav-item ss-nav-item--new-chat">
+          <svg viewBox="0 0 16 16" fill="none" xmlns="http://www.w3.org/2000/svg" aria-hidden="true">
+            <path d="M8 3.5v9M3.5 8h9" stroke="currentColor" stroke-width="1.2" stroke-linecap="round"/>
+          </svg>
+          <span class="ss-sidenav__label">New chat</span>
+        </a>
+        <button type="button" class="ss-nav-item">
+          <svg viewBox="0 0 16 16" fill="none" xmlns="http://www.w3.org/2000/svg" aria-hidden="true">
+            <circle cx="7" cy="7" r="4.5" stroke="currentColor" stroke-width="1.2"/>
+            <path d="M10.5 10.5L13 13" stroke="currentColor" stroke-width="1.2" stroke-linecap="round"/>
+          </svg>
+          <span class="ss-sidenav__label">Search chats</span>
+        </button>
+        <button type="button" class="ss-nav-item ss-nav-item--recents-shortcut" aria-label="Recents">
+          <svg viewBox="0 0 16 16" fill="none" xmlns="http://www.w3.org/2000/svg" aria-hidden="true">
+            <circle cx="8" cy="8" r="5.5" stroke="currentColor" stroke-width="1.2"/>
+            <path d="M8 5v3.2l2 1.2" stroke="currentColor" stroke-width="1.2" stroke-linecap="round" stroke-linejoin="round"/>
+          </svg>
+          <span class="ss-sidenav__label ss-visually-hidden">Recents</span>
+        </button>
+      </nav>
+
+      <section class="ss-sidenav__recents" aria-label="Recent chats">
+        <div class="ss-sidenav__recents-head">
+          <button type="button" class="ss-sidenav__recents-toggle" aria-expanded="true" aria-controls="ss-sidenav-recents">
+            <svg viewBox="0 0 16 16" fill="none" xmlns="http://www.w3.org/2000/svg" aria-hidden="true">
+              <circle cx="8" cy="8" r="5.5" stroke="currentColor" stroke-width="1.2"/>
+              <path d="M8 5v3.2l2 1.2" stroke="currentColor" stroke-width="1.2" stroke-linecap="round" stroke-linejoin="round"/>
+            </svg>
+            <span class="ss-sidenav__label">Recents</span>
+            <svg class="ss-chevron ss-chevron--recents" viewBox="0 0 16 16" fill="none" xmlns="http://www.w3.org/2000/svg" aria-hidden="true">
+              <path d="M4 10l4-4 4 4" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/>
+            </svg>
+          </button>
+        </div>
+        <div class="ss-sidenav__recents-body" id="ss-sidenav-recents">
+          <div class="ss-sidenav__chat-group">
+            <p class="ss-sidenav__chat-label">Today</p>
+            <ul class="ss-sidenav__chat-list">
+              <li>
+                <a href="#" class="ss-sidenav__chat-item ss-sidenav__chat-item--active" aria-current="page">
+                  <span class="ss-sidenav__chat-indicator" aria-hidden="true"></span>
+                  <span class="ss-sidenav__chat-text">Demographic trends shaping consu…</span>
+                </a>
+              </li>
+              <li>
+                <a href="#" class="ss-sidenav__chat-item">
+                  <span class="ss-sidenav__chat-text">Psychographic segmentation for tar…</span>
+                </a>
+              </li>
+              <li>
+                <a href="#" class="ss-sidenav__chat-item">
+                  <span class="ss-sidenav__chat-text">Behavioral data analysis in audience</span>
+                </a>
+              </li>
+              <li>
+                <a href="#" class="ss-sidenav__chat-item">
+                  <span class="ss-sidenav__chat-text">Geo-targeting strategies for market…</span>
+                </a>
+              </li>
+            </ul>
+          </div>
+          <div class="ss-sidenav__chat-group">
+            <p class="ss-sidenav__chat-label">Older</p>
+            <ul class="ss-sidenav__chat-list">
+              <li>
+                <a href="#" class="ss-sidenav__chat-item">
+                  <span class="ss-sidenav__chat-text">Consumer behavior in luxury markets</span>
+                </a>
+              </li>
+              <li>
+                <a href="#" class="ss-sidenav__chat-item">
+                  <span class="ss-sidenav__chat-text">Impact of digital transformation on…</span>
+                </a>
+              </li>
+              <li>
+                <a href="#" class="ss-sidenav__chat-item">
+                  <span class="ss-sidenav__chat-text">Shifts in urban mobility preferences</span>
+                </a>
+              </li>
+              <li>
+                <a href="#" class="ss-sidenav__chat-item">
+                  <span class="ss-sidenav__chat-text">Health and wellness: new market dy…</span>
+                </a>
+              </li>
+            </ul>
+          </div>
+        </div>
+      </section>
+    </div>
+  </div>
+
+  <footer class="ss-sidenav__footer">
+    <div class="ss-sidenav__footer-inner">
+      <button type="button" class="ss-help-row" aria-label="Help" aria-haspopup="true" aria-expanded="false">
+        <svg viewBox="0 0 16 16" fill="none" xmlns="http://www.w3.org/2000/svg" aria-hidden="true">
+          <circle cx="8" cy="8" r="5.5" stroke="currentColor" stroke-width="1.2"/>
+          <path d="M8 11.2a.65.65 0 110-1.3.65.65 0 010 1.3zm0-2.35c.9 0 1.35-.55 1.35-1.25 0-.85-.7-1.4-1.35-1.4-.75 0-1.35.5-1.35 1.25a.65.65 0 11-1.3 0c0-1.15 1.05-2.05 2.65-2.05 1.35 0 2.65.75 2.65 2.2 0 1.05-.65 1.75-1.6 2.1v.15a.65.65 0 11-1.3 0v-.2z" fill="currentColor"/>
+        </svg>
+        <span class="ss-sidenav__label">Help</span>
+        <svg class="ss-chevron" viewBox="0 0 16 16" fill="none" xmlns="http://www.w3.org/2000/svg" aria-hidden="true">
+          <path d="M4 6l4 4 4-4" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/>
+        </svg>
+      </button>
+      <div class="ss-user-block">
+        <button type="button" class="ss-user-trigger" aria-haspopup="true" aria-expanded="false" aria-controls="account-menu">
+          <span class="ss-user-avatar" aria-hidden="true">J</span>
+          <span class="ss-user-trigger__label ss-sidenav__label">John Smith</span>
+          <svg class="ss-chevron" viewBox="0 0 16 16" fill="none" xmlns="http://www.w3.org/2000/svg" aria-hidden="true">
+            <path d="M4 6l4 4 4-4" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/>
+          </svg>
+        </button>
+        <ul id="account-menu" class="ss-account-menu" role="menu" hidden>
+          <li role="none">
+            <a href="overview.html" class="ss-account-menu__item" role="menuitem">
+              <svg viewBox="0 0 16 16" fill="none" xmlns="http://www.w3.org/2000/svg" aria-hidden="true">
+                <circle cx="8" cy="8" r="2.25" stroke="currentColor" stroke-width="1.2"/>
+                <path d="M8 5.5V4M8 11.5v-1.5M10.2 10.2l1.1 1.1M4.7 5.8L3.6 4.7M11.5 8h1.5M4 8H2.5M10.2 5.8l1.1-1.1M4.7 10.2l-1.1 1.1" stroke="currentColor" stroke-width="1.2" stroke-linecap="round"/>
+              </svg>
+              Account Settings
+            </a>
+          </li>
+          <li role="none">
+            <button type="button" class="ss-account-menu__item" role="menuitem">
+              <svg viewBox="0 0 16 16" fill="none" xmlns="http://www.w3.org/2000/svg" aria-hidden="true">
+                <path d="M6 14H3a1 1 0 01-1-1V3a1 1 0 011-1h3M11 11l4-4M11 5l4 4" stroke="currentColor" stroke-width="1.2" stroke-linecap="round" stroke-linejoin="round"/>
+              </svg>
+              Log out
+            </button>
+          </li>
+        </ul>
+      </div>
+    </div>
+  </footer>
+</aside>

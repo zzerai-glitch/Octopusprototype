@@ -3,8 +3,138 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Settings — Overview | GWI Octopus</title>
-  <link rel="stylesheet" href="css/self-serve.css?v=overview-spacing-1">
+  <title>Settings — Overview (loading) | GWI Octopus</title>
+  <!-- Self-contained shell for file:// (same folder as this HTML). Optional: add css/self-serve.css after for Faktum when served from repo root. -->
+  <link rel="stylesheet" href="overview-loading-file.css">
+  <link rel="stylesheet" href="css/self-serve.css?v=sidenav-3">
+  <style>
+    /* Overview loading prototype — skeletons + shimmer from Figma (Self-serve Octopus) */
+    .ss-ovl-skel {
+      position: relative;
+      display: block;
+      overflow: hidden;
+      border-radius: 4px;
+      flex-shrink: 0;
+    }
+    .ss-ovl-skel--l {
+      background: #dfe7f5;
+    }
+    .ss-ovl-skel--m {
+      background: #ced9eb;
+    }
+    .ss-ovl-skel::after {
+      content: '';
+      position: absolute;
+      top: -30px;
+      bottom: -30px;
+      left: 0;
+      width: 45%;
+      max-width: 200px;
+      background: linear-gradient(
+        90deg,
+        rgb(223, 231, 245) 0%,
+        rgb(239, 245, 255) 25%,
+        rgba(239, 245, 255, 0.4) 64.776%,
+        rgb(223, 231, 245) 100%
+      );
+      animation: ss-ovl-shimmer 1.4s linear infinite;
+      will-change: transform;
+      pointer-events: none;
+    }
+    @keyframes ss-ovl-shimmer {
+      0% {
+        transform: translateX(-120%);
+      }
+      100% {
+        transform: translateX(400%);
+      }
+    }
+    .ss-ovl-skel--pill {
+      border-radius: 100px;
+    }
+    .ss-ovl-skel--round {
+      border-radius: 50%;
+    }
+
+    .ss-ovl-chip {
+      height: 24px;
+    }
+
+    .ss-load-section {
+      opacity: 0;
+      transform: translateY(22px);
+      transition:
+        opacity 0.65s cubic-bezier(0.22, 1, 0.36, 1),
+        transform 0.65s cubic-bezier(0.22, 1, 0.36, 1);
+    }
+
+    .ss-load-section.ss-load-section--in {
+      opacity: 1;
+      transform: translateY(0);
+    }
+
+    .ss-ovl-field {
+      display: flex;
+      flex-direction: column;
+      gap: 8px;
+      min-width: 0;
+      flex: 1 1 200px;
+    }
+    .ss-ovl-field--full {
+      flex-basis: 100%;
+      padding-bottom: 24px;
+    }
+
+    .ss-ovl-access {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 24px;
+      align-items: flex-start;
+    }
+    .ss-ovl-access__col {
+      flex: 1 1 240px;
+      min-width: 0;
+      display: flex;
+      flex-direction: column;
+      gap: 8px;
+    }
+    .ss-ovl-tags {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 8px;
+      align-items: center;
+    }
+
+    .ss-ovl-hint {
+      display: flex;
+      align-items: center;
+      gap: 4px;
+      flex-wrap: wrap;
+    }
+
+    .visually-hidden {
+      position: absolute;
+      width: 1px;
+      height: 1px;
+      padding: 0;
+      margin: -1px;
+      overflow: hidden;
+      clip: rect(0, 0, 0, 0);
+      white-space: nowrap;
+      border: 0;
+    }
+
+    @media (prefers-reduced-motion: reduce) {
+      .ss-ovl-skel::after {
+        animation: none;
+      }
+      .ss-load-section {
+        opacity: 1;
+        transform: none;
+        transition: none;
+      }
+    }
+  </style>
 </head>
 <body>
   <div class="ss-layout">
@@ -165,7 +295,7 @@
       </header>
 
       <nav class="ss-tabs" aria-label="Settings sections">
-        <a class="ss-tab ss-tab--active" href="overview.html">
+        <a class="ss-tab ss-tab--active" href="overview-loading.html" aria-current="page">
           <svg viewBox="0 0 12 14" xmlns="http://www.w3.org/2000/svg" aria-hidden="true"><path d="M4.156 13.2l-.012-.001L.6 13.2c-.331 0-.6-.269-.6-.6V7.267c0-.332.269-.6.6-.6l2.956-.001V.6c0-.331.269-.6.6-.6h3.555c.332 0 .6.269.6.6v2.733h2.956c.331 0 .6.269.6.6V12.6c0 .331-.269.6-.6.6H4.156zm2.955-12H4.756V12h2.355V1.2zm3.556 3.333H8.31V12h2.356V4.533zM3.555 7.867H1.2V12h2.355V7.867z" fill="currentColor"/></svg>
           Overview
         </a>
@@ -179,116 +309,194 @@
         </a>
       </nav>
 
-      <div class="ss-overview">
+      <div class="ss-overview" id="overview-loading-root" aria-busy="true" aria-describedby="loading-help">
+        <span class="visually-hidden" id="loading-help">Overview content is loading.</span>
+
         <section class="ss-overview__intro" aria-labelledby="page-title">
-          <h2 id="page-title" class="ss-overview__title">Overview</h2>
-          <p class="ss-overview__lead">View your personal account preferences and settings.</p>
+          <div>
+            <h2 id="page-title" class="ss-overview__title">Overview</h2>
+            <p class="ss-overview__lead">View your personal account preferences and settings.</p>
+          </div>
           <div class="ss-overview__org">
             <p class="ss-overview__org-label">Organisation</p>
             <div class="ss-overview__org-row">
-              <span class="ss-overview__org-name">ACME Global</span>
-              <span class="ss-role-chip ss-role-chip--admin-light">Admin</span>
+              <span class="ss-ovl-skel ss-ovl-skel--m" style="width:182px;height:32px" role="presentation"></span>
+              <span class="ss-ovl-skel ss-ovl-skel--l" style="width:54px;height:24px" role="presentation"></span>
             </div>
           </div>
         </section>
 
         <div class="ss-overview__panels">
-          <section class="ss-overview-card" aria-labelledby="profile-heading">
-            <h3 id="profile-heading" class="ss-overview-card__title">Profile information</h3>
+          <section class="ss-overview-card ss-load-section" data-ss-enter-delay="0" aria-labelledby="profile-skel-heading">
+            <h3 id="profile-skel-heading" class="visually-hidden">Profile information loading</h3>
             <div class="ss-overview-fields ss-overview-fields--sections">
+              <div class="ss-overview-fields__row" style="margin-bottom:16px">
+                <span class="ss-ovl-skel ss-ovl-skel--m" style="width:182px;height:32px" role="presentation"></span>
+              </div>
               <div class="ss-overview-fields__row">
-                <div class="ss-overview-field">
-                  <div class="ss-overview-field__label">First name</div>
-                  <div class="ss-overview-field__value">John</div>
+                <div class="ss-ovl-field">
+                  <span class="ss-ovl-skel ss-ovl-skel--l" style="width:74px;height:16px" role="presentation"></span>
+                  <span class="ss-ovl-skel ss-ovl-skel--m" style="width:165px;height:16px" role="presentation"></span>
                 </div>
-                <div class="ss-overview-field">
-                  <div class="ss-overview-field__label">Last name</div>
-                  <div class="ss-overview-field__value">Doe</div>
+                <div class="ss-ovl-field">
+                  <span class="ss-ovl-skel ss-ovl-skel--l" style="width:74px;height:16px" role="presentation"></span>
+                  <span class="ss-ovl-skel ss-ovl-skel--m" style="width:165px;height:16px" role="presentation"></span>
                 </div>
               </div>
               <div class="ss-overview-fields__block">
-              <div class="ss-overview-fields__row">
-                <div class="ss-overview-field">
-                  <div class="ss-overview-field__label">City</div>
-                  <div class="ss-overview-field__value">London</div>
+                <div class="ss-overview-fields__row">
+                  <div class="ss-ovl-field">
+                    <span class="ss-ovl-skel ss-ovl-skel--l" style="width:74px;height:16px" role="presentation"></span>
+                    <span class="ss-ovl-skel ss-ovl-skel--m" style="width:165px;height:16px" role="presentation"></span>
+                  </div>
+                  <div class="ss-ovl-field">
+                    <span class="ss-ovl-skel ss-ovl-skel--l" style="width:74px;height:16px" role="presentation"></span>
+                    <span class="ss-ovl-skel ss-ovl-skel--m" style="width:165px;height:16px" role="presentation"></span>
+                  </div>
                 </div>
-                <div class="ss-overview-field">
-                  <div class="ss-overview-field__label">Country</div>
-                  <div class="ss-overview-field__value">United Kingdom</div>
-                </div>
-              </div>
               </div>
               <div class="ss-overview-fields__pro">
-              <div class="ss-overview-fields__row">
-                <div class="ss-overview-field">
-                  <div class="ss-overview-field__label">Occupation</div>
-                  <div class="ss-overview-field__value">Other</div>
+                <div class="ss-overview-fields__row">
+                  <div class="ss-ovl-field">
+                    <span class="ss-ovl-skel ss-ovl-skel--l" style="width:74px;height:16px" role="presentation"></span>
+                    <span class="ss-ovl-skel ss-ovl-skel--m" style="width:165px;height:16px" role="presentation"></span>
+                  </div>
+                  <div class="ss-ovl-field">
+                    <span class="ss-ovl-skel ss-ovl-skel--l" style="width:74px;height:16px" role="presentation"></span>
+                    <span class="ss-ovl-skel ss-ovl-skel--m" style="width:165px;height:16px" role="presentation"></span>
+                  </div>
                 </div>
-                <div class="ss-overview-field">
-                  <div class="ss-overview-field__label">Industry</div>
-                  <div class="ss-overview-field__value">Advertising</div>
-                </div>
-              </div>
-                <div class="ss-overview-field ss-overview-field--full">
-                  <div class="ss-overview-field__label">Job title</div>
-                  <div class="ss-overview-field__value">Advertising Executive</div>
+                <div class="ss-ovl-field ss-ovl-field--full">
+                  <span class="ss-ovl-skel ss-ovl-skel--l" style="width:74px;height:16px" role="presentation"></span>
+                  <span class="ss-ovl-skel ss-ovl-skel--m" style="width:165px;height:16px" role="presentation"></span>
                 </div>
               </div>
             </div>
           </section>
 
-          <section class="ss-overview-card" aria-labelledby="security-heading">
-            <h3 id="security-heading" class="ss-overview-card__title">Security</h3>
+          <section class="ss-overview-card ss-load-section" data-ss-enter-delay="150" aria-labelledby="security-skel-heading">
+            <h3 id="security-skel-heading" class="visually-hidden">Security loading</h3>
             <div class="ss-overview-fields">
-              <div class="ss-overview-field ss-overview-field--full">
-                <div class="ss-overview-field__label">Email address</div>
-                <div class="ss-overview-field__value">john.doe@acmeglobal.com</div>
+              <div style="margin-bottom:16px">
+                <span class="ss-ovl-skel ss-ovl-skel--m" style="width:182px;height:32px" role="presentation"></span>
               </div>
-              <div class="ss-overview-hint" role="note">
-                <svg class="ss-overview-hint__icon" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg" aria-hidden="true">
-                  <circle cx="12" cy="12" r="10" stroke="currentColor" stroke-width="1.5"/>
-                  <path d="M12 16v.01M12 8v5" stroke="currentColor" stroke-width="1.75" stroke-linecap="round"/>
-                </svg>
-                <p class="ss-overview-hint__text">
-                  To change your email address or close your account please contact
-                  <a class="ss-link-accent" href="mailto:support@gwi.com">support@gwi.com</a>
-                </p>
+              <div class="ss-overview-field ss-overview-field--full" style="gap:8px;display:flex;flex-direction:column">
+                <span class="ss-ovl-skel ss-ovl-skel--l" style="width:74px;height:16px" role="presentation"></span>
+                <span class="ss-ovl-skel ss-ovl-skel--m" style="width:165px;height:16px" role="presentation"></span>
+              </div>
+              <div class="ss-ovl-hint" style="margin-top:24px">
+                <span class="ss-ovl-skel ss-ovl-skel--l" style="width:14px;height:14px" role="presentation"></span>
+                <span class="ss-ovl-skel ss-ovl-skel--l" style="width:255px;max-width:100%;height:16px" role="presentation"></span>
               </div>
             </div>
           </section>
 
-          <section class="ss-overview-card" aria-labelledby="dataset-heading">
-            <h3 id="dataset-heading" class="ss-overview-card__title">Personal dataset access</h3>
-            <div class="ss-overview-access">
-              <div class="ss-overview-access__col">
-                <p class="ss-overview-access__label">Data bundles</p>
-                <div class="ss-overview-access__tags">
-                  <span class="ss-chip ss-chip--bundle">GWI Core</span>
-                  <span class="ss-chip ss-chip--bundle">Zeitgeist</span>
-                  <span class="ss-chip ss-chip--bundle">GWI Gaming</span>
-                  <span class="ss-chip ss-chip--bundle">GWI Sports</span>
-                  <span class="ss-chip ss-chip--bundle">Insights Recontact 2022</span>
+          <section class="ss-overview-card ss-load-section" data-ss-enter-delay="300" aria-labelledby="dataset-skel-heading">
+            <h3 id="dataset-skel-heading" class="visually-hidden">Personal dataset access loading</h3>
+            <div style="margin-bottom:24px">
+              <span class="ss-ovl-skel ss-ovl-skel--m" style="width:182px;height:32px" role="presentation"></span>
+            </div>
+            <div class="ss-ovl-access">
+              <div class="ss-ovl-access__col">
+                <span class="ss-ovl-skel ss-ovl-skel--l" style="width:74px;height:16px" role="presentation"></span>
+                <div class="ss-ovl-tags">
+                  <span class="ss-ovl-skel ss-ovl-skel--m ss-ovl-chip" style="width:74px" role="presentation"></span>
+                  <span class="ss-ovl-skel ss-ovl-skel--m ss-ovl-chip" style="width:74px" role="presentation"></span>
+                  <span class="ss-ovl-skel ss-ovl-skel--m ss-ovl-chip" style="width:114px" role="presentation"></span>
+                  <span class="ss-ovl-skel ss-ovl-skel--m ss-ovl-chip" style="width:74px" role="presentation"></span>
+                  <span class="ss-ovl-skel ss-ovl-skel--m ss-ovl-chip" style="width:112px" role="presentation"></span>
+                  <span class="ss-ovl-skel ss-ovl-skel--m ss-ovl-chip" style="width:74px" role="presentation"></span>
+                  <span class="ss-ovl-skel ss-ovl-skel--m ss-ovl-chip" style="width:74px" role="presentation"></span>
+                  <span class="ss-ovl-skel ss-ovl-skel--m ss-ovl-chip" style="width:74px" role="presentation"></span>
+                  <span class="ss-ovl-skel ss-ovl-skel--m ss-ovl-chip" style="width:177px" role="presentation"></span>
                 </div>
               </div>
-              <div class="ss-overview-access__col">
-                <p class="ss-overview-access__label">Location bundles</p>
-                <div class="ss-overview-access__tags">
-                  <span class="ss-chip ss-chip--bundle">France</span>
-                  <span class="ss-chip ss-chip--bundle">United Kingdom</span>
-                  <span class="ss-chip ss-chip--bundle">USA</span>
+              <div class="ss-ovl-access__col">
+                <span class="ss-ovl-skel ss-ovl-skel--l" style="width:74px;height:16px" role="presentation"></span>
+                <div class="ss-ovl-tags">
+                  <span class="ss-ovl-skel ss-ovl-skel--m ss-ovl-chip" style="width:74px" role="presentation"></span>
+                  <span class="ss-ovl-skel ss-ovl-skel--m ss-ovl-chip" style="width:74px" role="presentation"></span>
+                  <span class="ss-ovl-skel ss-ovl-skel--m ss-ovl-chip" style="width:114px" role="presentation"></span>
+                  <span class="ss-ovl-skel ss-ovl-skel--m ss-ovl-chip" style="width:74px" role="presentation"></span>
+                  <span class="ss-ovl-skel ss-ovl-skel--m ss-ovl-chip" style="width:106px" role="presentation"></span>
                 </div>
               </div>
             </div>
           </section>
 
-          <p class="ss-overview-footnote">
-            To make changes to your access or settings, please contact your organisation’s admin or
-            <a class="ss-link-accent" href="mailto:support@gwi.com">support@gwi.com</a>
-          </p>
+          <div class="ss-overview-footnote ss-load-section" data-ss-enter-delay="450">
+            <span class="ss-ovl-skel ss-ovl-skel--l ss-ovl-skel--pill" style="width:min(483px, 100%);height:16px" role="presentation"></span>
+          </div>
         </div>
       </div>
     </div>
   </div>
   <script src="js/sidenav.js"></script>
+  <script>
+    (function () {
+      var root = document.getElementById('overview-loading-root');
+      var reduceMotion = window.matchMedia('(prefers-reduced-motion: reduce)');
+      /** Time for stagger + opacity transition (.ss-load-section) */
+      var ENTER_MS = 680;
+      var nodes = document.querySelectorAll('[data-ss-enter-delay]');
+
+      function reveal(el) {
+        window.requestAnimationFrame(function () {
+          window.requestAnimationFrame(function () {
+            el.classList.add('ss-load-section--in');
+          });
+        });
+      }
+
+      function run() {
+        var maxDelay = 0;
+
+        nodes.forEach(function (el) {
+          var d = Number(el.getAttribute('data-ss-enter-delay'));
+          if (Number.isFinite(d)) {
+            if (d > maxDelay) maxDelay = d;
+          } else {
+            d = 0;
+          }
+
+          if (reduceMotion.matches) {
+            reveal(el);
+            return;
+          }
+
+          window.setTimeout(function () {
+            reveal(el);
+          }, d);
+        });
+
+        window.setTimeout(function () {
+          if (root) root.setAttribute('aria-busy', 'false');
+        }, maxDelay + ENTER_MS + 100);
+
+        // If transitions are unreliable, ensure content is visible
+        window.setTimeout(function () {
+          nodes.forEach(function (el) {
+            if (window.getComputedStyle(el).opacity === '0') {
+              reveal(el);
+            }
+          });
+        }, maxDelay + ENTER_MS + 400);
+      }
+
+      run();
+      reduceMotion.addEventListener(
+        'change',
+        function () {
+          nodes.forEach(function (el) {
+            if (reduceMotion.matches) {
+              reveal(el);
+              el.style.transition = 'none';
+            }
+          });
+        },
+        false
+      );
+    })();
+  </script>
 </body>
 </html>
