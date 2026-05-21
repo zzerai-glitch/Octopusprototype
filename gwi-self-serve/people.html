@@ -4,7 +4,7 @@
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Settings — People | GWI Octopus</title>
-  <link rel="stylesheet" href="css/self-serve.css?v=sidenav-3">
+  <link rel="stylesheet" href="css/self-serve.css?v=form-field-medium-1">
 </head>
 <body>
   <div class="ss-layout">
@@ -439,7 +439,7 @@
     </div>
   </div>
 
-  <!-- Invite member (Figma: Self-serve — Octopus, node 118:32583 modal) -->
+  <!-- Invite member (Figma: Self-serve — Octopus, nodes 737:48692 / 737:50454 / 737:51189 / 737:51838) -->
   <div id="invite-member-modal" class="ss-invite-modal" role="dialog" aria-modal="true" aria-labelledby="invite-modal-title" hidden aria-hidden="true">
     <div class="ss-invite-modal__backdrop js-invite-modal-close" tabindex="-1" aria-hidden="true"></div>
     <div class="ss-invite-modal__panel js-invite-modal-panel" tabindex="-1">
@@ -453,39 +453,55 @@
       </div>
 
       <form class="ss-invite-modal__form" id="invite-member-form" novalidate>
-        <p class="ss-invite-modal__intro">Add their name and work email, then pick a role. We’ll send them a link to accept and join your organisation in GWI Octopus.</p>
-
-        <div class="ss-invite-modal__row-two">
-          <div class="ss-invite-field">
-            <label class="ss-invite-field__label" for="invite-first-name">First name</label>
-            <input id="invite-first-name" name="firstName" type="text" class="ss-invite-field__input" placeholder="e.g. Jamie" autocomplete="given-name" aria-required="true">
-            <p id="invite-first-name-error" class="ss-invite-field__error" role="alert" hidden></p>
-          </div>
-          <div class="ss-invite-field">
-            <label class="ss-invite-field__label" for="invite-last-name">Last name</label>
-            <input id="invite-last-name" name="lastName" type="text" class="ss-invite-field__input" placeholder="e.g. Jones" autocomplete="family-name" aria-required="true">
-            <p id="invite-last-name-error" class="ss-invite-field__error" role="alert" hidden></p>
-          </div>
-        </div>
+        <p class="ss-invite-modal__intro">The invitee will receive an email with instructions to join GWI Octopus</p>
 
         <div class="ss-invite-field">
           <label class="ss-invite-field__label" for="invite-email">Email address</label>
-          <input id="invite-email" name="email" type="email" class="ss-invite-field__input" placeholder="name@yourcompany.com" autocomplete="email" aria-required="true" aria-describedby="invite-email-desc">
+          <input id="invite-email" name="email" type="email" class="ss-invite-field__input" placeholder="name@example.com" autocomplete="email" aria-required="true" aria-describedby="invite-email-desc">
           <p id="invite-email-error" class="ss-invite-field__error" role="alert" hidden></p>
-          <p id="invite-email-desc" class="ss-invite-field__hint">Must be a work email address.</p>
+          <p id="invite-email-desc" class="ss-invite-field__hint">
+            <svg class="ss-invite-field__hint-icon" viewBox="0 0 16 16" fill="none" xmlns="http://www.w3.org/2000/svg" aria-hidden="true">
+              <circle cx="8" cy="8" r="6.25" stroke="currentColor" stroke-width="1.2"/>
+              <path d="M8 7.2v4M8 4.8h.01" stroke="currentColor" stroke-width="1.4" stroke-linecap="round"/>
+            </svg>
+            Please use a valid work email address
+          </p>
         </div>
 
         <div class="ss-invite-field">
           <label class="ss-invite-field__label" for="invite-role">Role</label>
-          <div class="ss-invite-select-wrap">
-            <select id="invite-role" name="role" class="ss-invite-field__select" aria-required="true">
-              <option value="" selected>Select role</option>
-              <option value="admin">Admin</option>
-              <option value="member">Member</option>
-            </select>
-            <svg class="ss-invite-select__chevron" width="16" height="16" viewBox="0 0 16 16" fill="none" xmlns="http://www.w3.org/2000/svg" aria-hidden="true">
-              <path d="M4 6l4 4 4-4" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/>
-            </svg>
+          <div class="ss-invite-role" data-invite-role>
+            <input id="invite-role" name="role" type="hidden" aria-required="true">
+            <button type="button" class="ss-invite-role__trigger" id="invite-role-trigger" aria-haspopup="listbox" aria-expanded="false" aria-controls="invite-role-menu">
+              <span class="ss-invite-role__value js-invite-role-label">Select role</span>
+              <svg class="ss-invite-role__chevron" width="16" height="16" viewBox="0 0 16 16" fill="none" xmlns="http://www.w3.org/2000/svg" aria-hidden="true">
+                <path d="M4 6l4 4 4-4" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/>
+              </svg>
+            </button>
+            <div id="invite-role-menu" class="ss-invite-role__menu" role="listbox" aria-labelledby="invite-role-trigger" hidden>
+              <button type="button" class="ss-invite-role__option" role="option" data-role-value="member" aria-selected="false">
+                <span class="ss-invite-role__tick" aria-hidden="true">
+                  <svg width="16" height="16" viewBox="0 0 16 16" fill="none" xmlns="http://www.w3.org/2000/svg">
+                    <path d="M13.5 4.5L6 12 2.5 8.5" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+                  </svg>
+                </span>
+                <span class="ss-invite-role__option-copy">
+                  <span class="ss-invite-role__option-title">Member</span>
+                  <span class="ss-invite-role__option-desc">Full access to manage users and settings</span>
+                </span>
+              </button>
+              <button type="button" class="ss-invite-role__option" role="option" data-role-value="admin" aria-selected="false">
+                <span class="ss-invite-role__tick" aria-hidden="true">
+                  <svg width="16" height="16" viewBox="0 0 16 16" fill="none" xmlns="http://www.w3.org/2000/svg">
+                    <path d="M13.5 4.5L6 12 2.5 8.5" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+                  </svg>
+                </span>
+                <span class="ss-invite-role__option-copy">
+                  <span class="ss-invite-role__option-title">Admin</span>
+                  <span class="ss-invite-role__option-desc">Standard access to Octopus features</span>
+                </span>
+              </button>
+            </div>
           </div>
           <p id="invite-role-error" class="ss-invite-field__error" role="alert" hidden></p>
         </div>
@@ -498,7 +514,7 @@
 
         <div class="ss-invite-modal__footer">
           <button type="button" class="ss-btn-cancel js-invite-modal-close">Cancel</button>
-          <button type="submit" class="ss-btn-invite-submit">Invite member</button>
+          <button type="submit" class="ss-btn-invite-submit" disabled>Invite user</button>
         </div>
       </form>
     </div>
@@ -1045,6 +1061,12 @@
       var inviteToastTimer = null;
       var toastEl = document.getElementById('invite-success-toast');
       var toastMsgEl = toastEl && toastEl.querySelector('.js-invite-toast-message');
+      var roleInput = document.getElementById('invite-role');
+      var roleTrigger = document.getElementById('invite-role-trigger');
+      var roleLabel = document.querySelector('.js-invite-role-label');
+      var roleMenu = document.getElementById('invite-role-menu');
+      var roleOptions = roleMenu ? roleMenu.querySelectorAll('.ss-invite-role__option') : [];
+      var submitBtn = form && form.querySelector('.ss-btn-invite-submit');
 
       function hideInviteToast() {
         if (inviteToastTimer) {
@@ -1072,7 +1094,24 @@
         }, 5000);
       }
 
-      var inviteFieldIds = ['invite-first-name', 'invite-last-name', 'invite-email', 'invite-role'];
+      var inviteFieldIds = ['invite-email', 'invite-role'];
+      var personalEmailDomains = [
+        'aol.com',
+        'gmail.com',
+        'googlemail.com',
+        'hotmail.com',
+        'icloud.com',
+        'live.com',
+        'mail.com',
+        'me.com',
+        'msn.com',
+        'outlook.com',
+        'pm.me',
+        'proton.me',
+        'protonmail.com',
+        'yahoo.com',
+        'ymail.com'
+      ];
 
       function clearInviteInputError(inputId) {
         var input = document.getElementById(inputId);
@@ -1091,6 +1130,10 @@
           input.setAttribute('aria-describedby', 'invite-email-desc');
         } else if (inputId === 'invite-role') {
           input.removeAttribute('aria-describedby');
+          if (roleTrigger) {
+            roleTrigger.removeAttribute('aria-invalid');
+            roleTrigger.removeAttribute('aria-describedby');
+          }
         }
       }
 
@@ -1110,33 +1153,106 @@
         if (wrap) {
           wrap.classList.add('ss-invite-field--error');
         }
-        errEl.textContent = message;
+        errEl.textContent = '';
+        if (inputId === 'invite-email') {
+          var icon = document.createElementNS('http://www.w3.org/2000/svg', 'svg');
+          icon.setAttribute('class', 'ss-invite-field__error-icon');
+          icon.setAttribute('viewBox', '0 0 16 16');
+          icon.setAttribute('fill', 'none');
+          icon.setAttribute('aria-hidden', 'true');
+          var path = document.createElementNS('http://www.w3.org/2000/svg', 'path');
+          path.setAttribute('d', 'M8 1.75 14.25 13H1.75L8 1.75Zm0 4.25v3.5M8 11.75h.01');
+          path.setAttribute('stroke', 'currentColor');
+          path.setAttribute('stroke-width', '1.2');
+          path.setAttribute('stroke-linecap', 'round');
+          path.setAttribute('stroke-linejoin', 'round');
+          icon.appendChild(path);
+          errEl.appendChild(icon);
+        }
+        errEl.appendChild(document.createTextNode(message));
         errEl.removeAttribute('hidden');
         input.setAttribute('aria-invalid', 'true');
         if (inputId === 'invite-email') {
-          input.setAttribute('aria-describedby', 'invite-email-error invite-email-desc');
+          input.setAttribute('aria-describedby', 'invite-email-error');
         } else if (inputId === 'invite-role') {
           input.setAttribute('aria-describedby', 'invite-role-error');
+          if (roleTrigger) {
+            roleTrigger.setAttribute('aria-invalid', 'true');
+            roleTrigger.setAttribute('aria-describedby', 'invite-role-error');
+          }
         }
+      }
+
+      function isPersonalEmailAddress(email) {
+        var domain = email.split('@').pop().toLowerCase();
+        return personalEmailDomains.indexOf(domain) !== -1;
+      }
+
+      function showPersonalEmailErrorIfNeeded() {
+        var emailEl = document.getElementById('invite-email');
+        if (!emailEl) {
+          return false;
+        }
+        var emailVal = emailEl.value.trim();
+        if (emailVal && emailEl.validity.valid && isPersonalEmailAddress(emailVal)) {
+          setInviteFieldError('invite-email', 'Please use a valid work email address');
+          return true;
+        }
+        return false;
+      }
+
+      function isCompleteWorkEmail() {
+        var emailEl = document.getElementById('invite-email');
+        if (!emailEl) {
+          return false;
+        }
+        var emailVal = emailEl.value.trim();
+        return !!emailVal && emailEl.validity.valid && !isPersonalEmailAddress(emailVal);
+      }
+
+      function syncInviteSubmitState() {
+        if (!submitBtn || !roleInput) {
+          return;
+        }
+        submitBtn.disabled = !(isCompleteWorkEmail() && !!roleInput.value);
+      }
+
+      function closeRoleMenu() {
+        if (!roleMenu || !roleTrigger) {
+          return;
+        }
+        roleMenu.setAttribute('hidden', '');
+        roleTrigger.setAttribute('aria-expanded', 'false');
+      }
+
+      function openRoleMenu() {
+        if (!roleMenu || !roleTrigger) {
+          return;
+        }
+        roleMenu.removeAttribute('hidden');
+        roleTrigger.setAttribute('aria-expanded', 'true');
+      }
+
+      function setInviteRole(value) {
+        if (!roleInput || !roleLabel) {
+          return;
+        }
+        roleInput.value = value || '';
+        roleLabel.textContent = value ? (value === 'admin' ? 'Admin' : 'Member') : 'Select role';
+        Array.prototype.forEach.call(roleOptions, function (option) {
+          option.setAttribute('aria-selected', option.getAttribute('data-role-value') === value ? 'true' : 'false');
+        });
+        clearInviteInputError('invite-role');
+        syncInviteSubmitState();
       }
 
       function validateInviteForm() {
         clearAllInviteFieldErrors();
-        var fnEl = document.getElementById('invite-first-name');
-        var lnEl = document.getElementById('invite-last-name');
         var emailEl = document.getElementById('invite-email');
         var roleEl = document.getElementById('invite-role');
         var firstFocus = null;
-        if (!fnEl || !lnEl || !emailEl || !roleEl) {
+        if (!emailEl || !roleEl) {
           return false;
-        }
-        if (!fnEl.value.trim()) {
-          setInviteFieldError('invite-first-name', 'Enter first name.');
-          firstFocus = fnEl;
-        }
-        if (!lnEl.value.trim()) {
-          setInviteFieldError('invite-last-name', 'Enter last name.');
-          firstFocus = firstFocus || lnEl;
         }
         var emailVal = emailEl.value.trim();
         if (!emailVal) {
@@ -1145,10 +1261,13 @@
         } else if (!emailEl.validity.valid) {
           setInviteFieldError('invite-email', 'Enter a valid email address.');
           firstFocus = firstFocus || emailEl;
+        } else if (isPersonalEmailAddress(emailVal)) {
+          setInviteFieldError('invite-email', 'Please use a valid work email address');
+          firstFocus = firstFocus || emailEl;
         }
         if (!roleEl.value) {
           setInviteFieldError('invite-role', 'Select a role.');
-          firstFocus = firstFocus || roleEl;
+          firstFocus = firstFocus || roleTrigger || roleEl;
         }
         if (firstFocus && typeof firstFocus.focus === 'function') {
           firstFocus.focus({ preventScroll: true });
@@ -1173,7 +1292,10 @@
         if (form) {
           form.reset();
         }
+        setInviteRole('');
+        closeRoleMenu();
         clearAllInviteFieldErrors();
+        syncInviteSubmitState();
         var ref = inviteFocusRestore;
         inviteFocusRestore = null;
         if (ref && typeof ref.focus === 'function') {
@@ -1207,8 +1329,9 @@
         modal.removeAttribute('hidden');
         modal.setAttribute('aria-hidden', 'false');
         document.body.style.overflow = 'hidden';
+        syncInviteSubmitState();
         requestAnimationFrame(function () {
-          var field = document.getElementById('invite-first-name');
+          var field = document.getElementById('invite-email');
           if (field && typeof field.focus === 'function') {
             field.focus();
           }
@@ -1222,19 +1345,13 @@
         });
       });
 
-      function addPendingMemberRow(firstName, lastName, email, roleValue) {
+      function addPendingMemberRow(email, roleValue) {
         var tbody = document.querySelector('.ss-people-table tbody');
         if (!tbody) {
           return;
         }
-        var parts = [firstName, lastName].map(function (s) {
-          return s && String(s).trim() ? String(s).trim() : '';
-        }).filter(Boolean);
-        var displayName = parts.join(' ');
-        if (!displayName) {
-          var at = email.indexOf('@');
-          displayName = at > 0 ? email.slice(0, at) : email;
-        }
+        var at = email.indexOf('@');
+        var displayName = at > 0 ? email.slice(0, at) : email;
         var isAdmin = roleValue === 'admin';
         var roleLabel = isAdmin ? 'Admin' : 'Member';
         var roleClass = isAdmin ? 'ss-role-chip ss-role-chip--admin' : 'ss-role-chip ss-role-chip--member';
@@ -1315,20 +1432,79 @@
       }
 
       if (form) {
-        ['invite-first-name', 'invite-last-name', 'invite-email'].forEach(function (fid) {
+        ['invite-email'].forEach(function (fid) {
           var el = document.getElementById(fid);
           if (el) {
             el.addEventListener('input', function () {
               clearInviteInputError(fid);
+              showPersonalEmailErrorIfNeeded();
+              syncInviteSubmitState();
             });
           }
         });
-        var roleSelect = document.getElementById('invite-role');
-        if (roleSelect) {
-          roleSelect.addEventListener('change', function () {
-            clearInviteInputError('invite-role');
+        if (roleTrigger && roleMenu) {
+          roleTrigger.addEventListener('click', function () {
+            if (roleMenu.hasAttribute('hidden')) {
+              openRoleMenu();
+            } else {
+              closeRoleMenu();
+            }
           });
         }
+        Array.prototype.forEach.call(roleOptions, function (option) {
+          option.addEventListener('click', function () {
+            setInviteRole(option.getAttribute('data-role-value'));
+            closeRoleMenu();
+            if (roleTrigger && typeof roleTrigger.focus === 'function') {
+              roleTrigger.focus({ preventScroll: true });
+            }
+          });
+        });
+
+        document.addEventListener('click', function (e) {
+          if (!roleMenu || roleMenu.hasAttribute('hidden')) {
+            return;
+          }
+          if (e.target.closest && e.target.closest('[data-invite-role]')) {
+            return;
+          }
+          closeRoleMenu();
+        });
+
+        if (roleTrigger) {
+          roleTrigger.addEventListener('keydown', function (e) {
+            if (e.key === 'ArrowDown' || e.key === 'Enter' || e.key === ' ') {
+              e.preventDefault();
+              openRoleMenu();
+              var selected = roleMenu && roleMenu.querySelector('[aria-selected="true"]');
+              var target = selected || (roleOptions && roleOptions[0]);
+              if (target && typeof target.focus === 'function') {
+                target.focus();
+              }
+            }
+          });
+        }
+
+        Array.prototype.forEach.call(roleOptions, function (option, idx) {
+          option.addEventListener('keydown', function (e) {
+            if (e.key === 'Escape') {
+              e.preventDefault();
+              closeRoleMenu();
+              if (roleTrigger && typeof roleTrigger.focus === 'function') {
+                roleTrigger.focus();
+              }
+              return;
+            }
+            if (e.key === 'ArrowDown' || e.key === 'ArrowUp') {
+              e.preventDefault();
+              var delta = e.key === 'ArrowDown' ? 1 : -1;
+              var next = roleOptions[(idx + delta + roleOptions.length) % roleOptions.length];
+              if (next && typeof next.focus === 'function') {
+                next.focus();
+              }
+            }
+          });
+        });
 
         form.addEventListener('submit', function (e) {
           e.preventDefault();
@@ -1337,13 +1513,9 @@
           }
           var emailEl = document.getElementById('invite-email');
           var email = emailEl && emailEl.value ? emailEl.value.trim() : '';
-          var fnEl = document.getElementById('invite-first-name');
-          var lnEl = document.getElementById('invite-last-name');
           var roleEl = document.getElementById('invite-role');
-          var firstName = fnEl && fnEl.value ? fnEl.value.trim() : '';
-          var lastName = lnEl && lnEl.value ? lnEl.value.trim() : '';
           var roleValue = roleEl && roleEl.value ? roleEl.value : '';
-          addPendingMemberRow(firstName, lastName, email, roleValue);
+          addPendingMemberRow(email, roleValue);
           closeInviteModal();
           showInviteSuccessToast(email);
         });
@@ -1368,6 +1540,14 @@
           return;
         }
         if (modal.hasAttribute('hidden')) {
+          return;
+        }
+        if (roleMenu && !roleMenu.hasAttribute('hidden')) {
+          e.preventDefault();
+          closeRoleMenu();
+          if (roleTrigger && typeof roleTrigger.focus === 'function') {
+            roleTrigger.focus();
+          }
           return;
         }
         closeInviteModal();
